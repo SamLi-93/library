@@ -1,0 +1,24 @@
+
+/* Sam edit */
+.login-layout{
+    background-image: url("../images/login_1.jpg");
+}
+
+.login_center {
+    margin:0 auto;
+}
+
+.login {
+    border: 0;
+    padding: 5px 0;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 100px;
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+    width: 400px;
+    text-align: center;
+}
+.login_center{
+    width: 80%;
+}

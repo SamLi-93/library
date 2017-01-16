@@ -1,0 +1,24 @@
+
+*{font-size: 12px;margin: 0px;padding: 0px;font-family:"Microsoft YaHei",微软雅黑,"Microsoft JhengHei",华文细黑,STHeiti,MingLiu}
+a{text-decoration: none;}
+body{margin: 0px;padding: 0px;background-color: #fff;}
+#main{border-right:1px solid #cccccc;border-top:1px solid #cccccc;border-bottom:1px solid #cccccc;}
+.main_content{width: 1410px;}
+.sims_top{height: 30px;width: 100%;background-color: #f7f7f7;}
+.sims_top1{background-image: url(../images/main_1.png);height: 22px;width: 30px;display: block;background-repeat: no-repeat;background-position: 5px 0px;float: left;}
+.sims_top2{display: block;float: left;color: #ff7300;padding-top: 7px;text-indent: 5px;padding-right: 10px}
+.sims_top3{display: block;float: left;color: #666666;width: 130px;padding-top: 7px;}
+.sims_top4{background-image: url(../images/main_2.png);height: 22px;width: 30px;display: block;background-repeat: no-repeat;background-position: 5px -1px;float: left;}
+.sims_top5{display: block;float: left;color: #666666;width: 250px;padding-top: 7px;}
+.sims_tip{height: 132px;width: 100%;background-image: url(../images/main_4.png);background-repeat: repeat-x;}
+.sims_tip1{float: left;margin: 10px 0 0 40px;}
+.sims_tip2{float: right;}
+.sims_left{width: 218px;float: left;border-bottom: 1px solid #dddddd;}
+.sims_left li{display: block;float: left;}
+.sims_list{cursor: pointer; background-image: url(../images/main_8.png);width: 218px;height: 50px;color: #fff;line-height: 52px;text-indent: 50px;font-size: 14px;}
+.sims_list_on{background-image: url(../images/main_7.png);width: 218px;height: 50px;color: #fff;line-height: 52px;text-indent: 50px;font-size: 14px;}
+.left_con{color: #666666;line-height: 50px;text-indent: 50px;background-image: url(../images/main_7.png);width: 218px;height: 46px;font-size: 14px;background-position: 0px -95px;display: block;}
+.left_con_on{color: #666666;font-weight: bold;line-height: 50px;text-indent: 50px;background-image: url(../images/main_7.png);font-size: 14px;width: 218px;height: 46px;background-position: 0px -50px;display: block;}
+.left_cons{margin: 0px;padding: 0px;}
+.logout{float: right;color: red; display: block; width: 50px; margin-right: 100px; background-color: #00b3ee;
+    text-align: center; margin-top: 10px;font-size: 16px; }
