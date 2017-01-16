@@ -29,20 +29,17 @@ use kartik\select2\Select2;
             ]);
             ?>
             <?php if (!empty($query['ProjectSearch'])) {
-//                $model->projectname = $query['ProjectSearch']['projectname'];
-            }?>
 
-<!--            --><?//= $form->field($model, 'teacher')->widget(Select2::classname(), ['data' => $pro_teacher,'options' => ['placeholder' => '请选择讲师'],  ]); ?>
-<!--            --><?//= $form->field($model, 'is_neibu')->widget(Select2::classname(), ['data' => ['2' => '外部', '1' => '内部'],'options' => ['placeholder' => '请选择是否内部课程'],  ]); ?>
+            }?>
 
             <table style="width: 100%;">
                 <tr>
                     <td>
-                        <div class="form-group">
-                            <?= Html::submitButton("查询", ["class" => "btn btn-primary btn-sm"]) ?>
-                            <?= Html::a("重置", ['index'], ["class" => "btn btn-primary btn-sm"]) ?>
-                            <?= Html::a('添加', ['create'], ['class' => 'btn btn-sm btn-success'])?>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            --><?//= Html::submitButton("查询", ["class" => "btn btn-primary btn-sm"]) ?>
+<!--                            --><?//= Html::a("重置", ['index'], ["class" => "btn btn-primary btn-sm"]) ?>
+<!--                            --><?//= Html::a('添加', ['create'], ['class' => 'btn btn-sm btn-success'])?>
+<!--                        </div>-->
                     </td>
                 </tr>
             </table>

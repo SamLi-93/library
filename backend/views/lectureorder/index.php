@@ -56,29 +56,29 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         ],
 
-        ['class' => 'yii\grid\ActionColumn',
-            'header' => '操作',
-            'template' => '{edit} {delete}',
-            'buttons' => [
-                'edit' => function ($url, $model, $key) {
-                    $options = [
-                        'title' => '修改',
-                        'class' => 'btn btn-success btn-sm',
-                        'id' => 'edit-btn',
-                    ];
-                    $url = Url::to(['lectureorder/edit', 'id' => $model['id']]);
-                    return Html::a('修改', $url, $options);
-                },
-                'delete' => function ($url, $model, $key) {
-                    $options = [
-                        'class' => 'btn btn-success',
-                    ];
-                    $url = Url::to(['lectureorder/delete', 'id' => $model['id']]);
-                    return Html::a('删除', $url, ['onclick' => 'return check()', 'class' => 'btn btn-success btn-sm', 'id' => 'delete-btn']);
-
-                },
-            ],
-        ],
+//        ['class' => 'yii\grid\ActionColumn',
+//            'header' => '操作',
+//            'template' => '{edit} {delete}',
+//            'buttons' => [
+//                'edit' => function ($url, $model, $key) {
+//                    $options = [
+//                        'title' => '修改',
+//                        'class' => 'btn btn-success btn-sm',
+//                        'id' => 'edit-btn',
+//                    ];
+//                    $url = Url::to(['lectureorder/edit', 'id' => $model['id']]);
+//                    return Html::a('修改', $url, $options);
+//                },
+//                'delete' => function ($url, $model, $key) {
+//                    $options = [
+//                        'class' => 'btn btn-success',
+//                    ];
+//                    $url = Url::to(['lectureorder/delete', 'id' => $model['id']]);
+//                    return Html::a('删除', $url, ['onclick' => 'return check()', 'class' => 'btn btn-success btn-sm', 'id' => 'delete-btn']);
+//
+//                },
+//            ],
+//        ],
     ],
 ]);
 

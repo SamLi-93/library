@@ -32,7 +32,6 @@ use kartik\select2\Select2;
 //                $model->projectname = $query['ProjectSearch']['projectname'];
             }?>
 
-<!--            --><?//= $form->field($model, 'projectname')->widget(Select2::classname(), ['data' => $pro_projectname, 'options' => ['placeholder' => '请选择项目'], ]); ?>
 
             <table style="width: 100%;">
                 <tr>
