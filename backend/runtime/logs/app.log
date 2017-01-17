@@ -36141,3 +36141,1176 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1484551958.8861
     'REQUEST_TIME' => 1484551958
 ]
+2017-01-17 10:13:51 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=45.3...', 'admin', 'Admin1-1', NULL)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\Project.php(96): yii\db\ActiveQuery->all()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\ProjectController.php(60): app\models\Project->getProjectName()
+#11 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Object.php(107): backend\controllers\ProjectController->init()
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(84): yii\base\Object->__construct('[]')
+#13 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs('[<span class="s...')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#17 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(567): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#18 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('<span class="st...')
+#19 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('<span class="st...')
+#20 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\Project.php(96): yii\db\ActiveQuery->all()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\ProjectController.php(60): app\models\Project->getProjectName()
+#9 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Object.php(107): backend\controllers\ProjectController->init()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(84): yii\base\Object->__construct('[]')
+#11 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs('[<span class="s...')
+#13 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(567): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('<span class="st...')
+#17 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('<span class="st...')
+#18 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#19 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2017-01-17 10:13:30 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1796'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/project/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/project/index'
+    'REMOTE_PORT' => '52917'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/project/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619210.8785
+    'REQUEST_TIME' => 1484619210
+]
+2017-01-17 10:17:17 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php:31
+2017-01-17 10:17:17 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1892'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'REMOTE_PORT' => '52979'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619437.6044
+    'REQUEST_TIME' => 1484619437
+]
+2017-01-17 10:17:34 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php:31
+2017-01-17 10:17:34 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1748'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply'
+    'REMOTE_PORT' => '52982'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619454.7404
+    'REQUEST_TIME' => 1484619454
+]
+2017-01-17 10:17:47 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php:31
+2017-01-17 10:17:35 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1796'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply'
+    'REMOTE_PORT' => '52983'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619455.3335
+    'REQUEST_TIME' => 1484619455
+]
+2017-01-17 10:18:23 [127.0.0.1][-][vufif6ballndajcugeamnj1nu4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=45.3...', 'admin', 'Admin1-1', NULL)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\common\models\User.php(66): yii\db\ActiveQuery->one()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(665): common\models\User::findIdentity('<span class="nu...')
+#11 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Component.php(219): yii\web\User->getIdentity()
+#13 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php(24): yii\base\Component->__isset('<span class="st...')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\LecturereleaseController->beforeAction(Object(yii\base\InlineAction))
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#17 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\common\models\User.php(66): yii\db\ActiveQuery->one()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(665): common\models\User::findIdentity('<span class="nu...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Component.php(219): yii\web\User->getIdentity()
+#11 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php(24): yii\base\Component->__isset('<span class="st...')
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\LecturereleaseController->beforeAction(Object(yii\base\InlineAction))
+#13 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#17 {main}
+Additional Information:
+
+2017-01-17 10:18:02 [127.0.0.1][-][vufif6ballndajcugeamnj1nu4][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1924'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'REMOTE_PORT' => '52999'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/project/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619482.339
+    'REQUEST_TIME' => 1484619482
+]
+2017-01-17 10:20:01 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=45.3...', 'admin', 'Admin1-1', NULL)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\common\models\User.php(66): yii\db\ActiveQuery->one()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(665): common\models\User::findIdentity('<span class="nu...')
+#11 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Component.php(219): yii\web\User->getIdentity()
+#13 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php(24): yii\base\Component->__isset('<span class="st...')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\LecturereleaseController->beforeAction(Object(yii\base\InlineAction))
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#17 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#19 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\common\models\User.php(66): yii\db\ActiveQuery->one()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(665): common\models\User::findIdentity('<span class="nu...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Component.php(219): yii\web\User->getIdentity()
+#11 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php(24): yii\base\Component->__isset('<span class="st...')
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\LecturereleaseController->beforeAction(Object(yii\base\InlineAction))
+#13 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#17 {main}
+Additional Information:
+
+2017-01-17 10:19:40 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1892'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'REMOTE_PORT' => '53045'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lectureorder/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619580.3176
+    'REQUEST_TIME' => 1484619580
+]
+2017-01-17 10:20:20 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php:31
+2017-01-17 10:20:20 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1748'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'REMOTE_PORT' => '53082'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619620.4509
+    'REQUEST_TIME' => 1484619620
+]
+2017-01-17 10:22:02 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php:31
+2017-01-17 10:22:02 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1932'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'REMOTE_PORT' => '53101'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619722.0807
+    'REQUEST_TIME' => 1484619722
+]
+2017-01-17 10:22:08 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=45.3...', 'admin', 'Admin1-1', NULL)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\Project.php(96): yii\db\ActiveQuery->all()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\ProjectController.php(60): app\models\Project->getProjectName()
+#11 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Object.php(107): backend\controllers\ProjectController->init()
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(84): yii\base\Object->__construct('[]')
+#13 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs('[<span class="s...')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#17 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(567): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#18 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('<span class="st...')
+#19 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('<span class="st...')
+#20 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#21 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(210): yii\db\Command->queryAll()
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\Project.php(96): yii\db\ActiveQuery->all()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\ProjectController.php(60): app\models\Project->getProjectName()
+#9 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Object.php(107): backend\controllers\ProjectController->init()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(84): yii\base\Object->__construct('[]')
+#11 [internal function]: yii\base\Controller->__construct('<span class="st...', Object(yii\web\Application), '[]')
+#12 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs('[<span class="s...')
+#13 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('<span class="st...', '[<span class="s...', '[]')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('<span class="st...', '[<span class="s...')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(567): yii\BaseYii::createObject('<span class="st...', '[<span class="s...')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('<span class="st...')
+#17 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('<span class="st...')
+#18 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#19 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2017-01-17 10:21:47 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1924'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/project/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/project/index'
+    'REMOTE_PORT' => '53100'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619707.6469
+    'REQUEST_TIME' => 1484619707
+]
+2017-01-17 10:22:30 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=45.3...', 'admin', 'Admin1-1', NULL)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('<span class="st...')
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#11 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\SmsAdmin.php(87): yii\db\ActiveQuery->one()
+#12 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\LoginForm.php(75): app\models\SmsAdmin::findByUsername('<span class="st...')
+#13 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\LoginForm.php(45): app\models\LoginForm->getUser()
+#14 [internal function]: app\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), '<span class="st...')
+#17 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), '[<span class="s...')
+#18 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\LoginForm.php(59): yii\base\Model->validate()
+#19 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\DefaultController.php(31): app\models\LoginForm->login()
+#20 [internal function]: backend\controllers\DefaultController->actionLogin()
+#21 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#22 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#23 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#24 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#25 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#26 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#27 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('<span class="st...')
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\SmsAdmin.php(87): yii\db\ActiveQuery->one()
+#10 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\LoginForm.php(75): app\models\SmsAdmin::findByUsername('<span class="st...')
+#11 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\LoginForm.php(45): app\models\LoginForm->getUser()
+#12 [internal function]: app\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#13 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#14 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), '<span class="st...')
+#15 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), '[<span class="s...')
+#16 D:\phpstudy\WWW\bookwap\trunk\library\backend\models\LoginForm.php(59): yii\base\Model->validate()
+#17 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\DefaultController.php(31): app\models\LoginForm->login()
+#18 [internal function]: backend\controllers\DefaultController->actionLogin()
+#19 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#20 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#21 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#22 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#23 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#25 {main}
+Additional Information:
+
+2017-01-17 10:22:09 [127.0.0.1][-][-][info][application] $_POST = [
+    '_csrf-backend' => 'MTQ1ZkM3Rkp0d2VfHFseckR.bBMAaAIEYGZ4AxF.BAVdWVQ.BW0pHw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => '000000'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1924'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/default/login'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/default/login'
+    'REMOTE_PORT' => '53130'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/default/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '149'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619729.2231
+    'REQUEST_TIME' => 1484619729
+]
+2017-01-17 10:22:52 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php:31
+2017-01-17 10:22:52 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1924'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/index'
+    'REMOTE_PORT' => '53153'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619772.5126
+    'REQUEST_TIME' => 1484619772
+]
+2017-01-17 10:23:48 [127.0.0.1][][vufif6ballndajcugeamnj1nu4][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'A session had already been started - ignoring session_start()' in D:\phpstudy\WWW\bookwap\trunk\library\backend\libs\LaneWeChat\lanewechat.php:4
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'A session had a...', 'D:\\phpstudy\\WWW...', 4, Array)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\backend\libs\LaneWeChat\lanewechat.php(4): session_start()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php(87): include('D:\\phpstudy\\WWW...')
+#3 [internal function]: backend\controllers\AutoreplyController->actionCreate()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('autoreply/creat...', Array)
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#10 {main}
+2017-01-17 10:23:43 [127.0.0.1][][vufif6ballndajcugeamnj1nu4][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1924'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/create'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/create'
+    'REMOTE_PORT' => '53198'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/autoreply/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619823.3975
+    'REQUEST_TIME' => 1484619823
+]
+2017-01-17 10:24:08 [127.0.0.1][][vufif6ballndajcugeamnj1nu4][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'A session had already been started - ignoring session_start()' in D:\phpstudy\WWW\bookwap\trunk\library\backend\libs\LaneWeChat\lanewechat.php:4
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'A session had a...', 'D:\\phpstudy\\WWW...', 4, Array)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\backend\libs\LaneWeChat\lanewechat.php(4): session_start()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php(87): include('D:\\phpstudy\\WWW...')
+#3 [internal function]: backend\controllers\AutoreplyController->actionCreate()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('autoreply/creat...', Array)
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#10 {main}
+2017-01-17 10:24:04 [127.0.0.1][][vufif6ballndajcugeamnj1nu4][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1932'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/create'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/create'
+    'REMOTE_PORT' => '53211'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/autoreply/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484619844.5387
+    'REQUEST_TIME' => 1484619844
+]
+2017-01-17 10:26:47 [127.0.0.1][][vufif6ballndajcugeamnj1nu4][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'A session had already been started - ignoring session_start()' in D:\phpstudy\WWW\bookwap\trunk\library\backend\libs\LaneWeChat\lanewechat.php:7
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'A session had a...', 'D:\\phpstudy\\WWW...', 7, Array)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\backend\libs\LaneWeChat\lanewechat.php(7): session_start()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\AutoreplyController.php(87): include('D:\\phpstudy\\WWW...')
+#3 [internal function]: backend\controllers\AutoreplyController->actionCreate()
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#7 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('autoreply/creat...', Array)
+#8 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#10 {main}
+2017-01-17 10:26:46 [127.0.0.1][][vufif6ballndajcugeamnj1nu4][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'advanced-backend' => 'vufif6ballndajcugeamnj1nu4'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1932'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/create'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/create'
+    'REMOTE_PORT' => '53441'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; advanced-backend=vufif6ballndajcugeamnj1nu4; PHPSESSID=vokfrc0vsli7ojpilptms2l041'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/autoreply/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484620006.756
+    'REQUEST_TIME' => 1484620006
+]
