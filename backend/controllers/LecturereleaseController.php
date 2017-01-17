@@ -89,9 +89,9 @@ class LecturereleaseController extends Controller
             $params = Yii::$app->request->post();
             $model->logo_url = UploadedFile::getInstance($model, 'logo_url');
             if (!empty($model->logo_url)) {
-                $url = Yii::$app->basePath .'/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+                $url = Yii::$app->basePath .'/web/upload_files/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
                 $model->logo_url->saveAs($url);
-                $logo_url = 'http://samlovesammy/library/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+                $logo_url = 'http://samlovesammy.xyz/library/backend/web/upload_files/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
             } else{
                 $logo_url = "http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0";
             }
@@ -167,9 +167,9 @@ class LecturereleaseController extends Controller
             $params = Yii::$app->request->post();
             $model->logo_url = UploadedFile::getInstance($model, 'logo_url');
             if (!empty($model->logo_url)) {
-                $url = Yii::$app->basePath .'/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+                $url = Yii::$app->basePath .'/web/upload_files/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
                 $model->logo_url->saveAs($url);
-                $logo_url = 'http://samlovesammy/library/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+                $logo_url = 'http://samlovesammy.xyz/library/backend/web/upload_files/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
             } else{
                 $logo_url = "http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0";
             }

@@ -24,35 +24,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/autoreply/edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/views/autoreply/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoreplyController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AutoreplyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/controllers/AutoreplyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
+            <state relative-caret-position="334">
+              <caret line="174" column="89" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="89" />
               <folding>
                 <element signature="e#118#147#0#PHP" expanded="true" />
                 <marker date="1484636035227" expanded="true" signature="1575:1639" ph="select * fro... index_keywords" />
                 <marker date="1484636035227" expanded="true" signature="1692:1728" ph="SELECT COUNT... index_keywords" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LecturereleaseController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/controllers/LecturereleaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+              <folding>
+                <marker date="1484636926030" expanded="true" signature="1206:1254" ph="select id,ti... lecture" />
+                <marker date="1484636926030" expanded="true" signature="1206:1311" ph="select id,ti... lecture" />
+                <marker date="1484636926030" expanded="true" signature="1364:1393" ph="SELECT COUNT... lecture" />
               </folding>
             </state>
           </provider>
@@ -120,10 +114,10 @@
         <option value="$PROJECT_DIR$/backend/models/Lecture.php" />
         <option value="$PROJECT_DIR$/backend/views/lecturerelease/edit.php" />
         <option value="$PROJECT_DIR$/backend/views/lecturerelease/create.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/LecturereleaseController.php" />
         <option value="$PROJECT_DIR$/backend/views/autoreply/create.php" />
         <option value="$PROJECT_DIR$/backend/views/autoreply/edit.php" />
         <option value="$PROJECT_DIR$/backend/controllers/AutoreplyController.php" />
+        <option value="$PROJECT_DIR$/backend/controllers/LecturereleaseController.php" />
       </list>
     </option>
   </component>
@@ -503,12 +497,12 @@
       <workItem from="1484182991960" duration="12158000" />
       <workItem from="1484271003227" duration="2781000" />
       <workItem from="1484544734480" duration="642000" />
-      <workItem from="1484614403257" duration="10550000" />
+      <workItem from="1484614403257" duration="11590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="784575000" />
+    <option name="totallyTimeSpent" value="785615000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
@@ -885,18 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/controllers/LecturereleaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4224">
-          <caret line="188" column="45" selection-start-line="188" selection-start-column="45" selection-end-line="188" selection-end-column="45" />
-          <folding>
-            <marker date="1484634489609" expanded="true" signature="1206:1254" ph="select id,ti... lecture" />
-            <marker date="1484634489609" expanded="true" signature="1206:1311" ph="select id,ti... lecture" />
-            <marker date="1484634489609" expanded="true" signature="1364:1393" ph="SELECT COUNT... lecture" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/views/autoreply/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="876">
@@ -915,12 +897,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/AutoreplyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
+        <state relative-caret-position="334">
+          <caret line="174" column="89" selection-start-line="174" selection-start-column="30" selection-end-line="174" selection-end-column="89" />
           <folding>
             <element signature="e#118#147#0#PHP" expanded="true" />
             <marker date="1484636035227" expanded="true" signature="1575:1639" ph="select * fro... index_keywords" />
             <marker date="1484636035227" expanded="true" signature="1692:1728" ph="SELECT COUNT... index_keywords" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/controllers/LecturereleaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+          <folding>
+            <marker date="1484636926030" expanded="true" signature="1206:1254" ph="select id,ti... lecture" />
+            <marker date="1484636926030" expanded="true" signature="1206:1311" ph="select id,ti... lecture" />
+            <marker date="1484636926030" expanded="true" signature="1364:1393" ph="SELECT COUNT... lecture" />
           </folding>
         </state>
       </provider>
