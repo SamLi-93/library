@@ -46,22 +46,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'notice')->textInput(['maxlength' => true,'placeholder' =>'卡券使用提醒']) ?>
     <?= $form->field($model, 'service_phone')->textInput(['maxlength' => true,'placeholder' =>'联系电话']) ?>
     <?= $form->field($model, 'description')->textInput(['maxlength' => true,'placeholder' =>'卡券使用说明']) ?>
-    <?= $form->field($model, 'begin_timestamp')->widget(DateTimePicker::classname(), [
-        'options' => ['placeholder' => '起用时间'],
-        'pluginOptions' => [
-            'autoclose' => true,
-            'todayHighlight' => true,
-            'format' => 'yyyy-mm-dd hh:ii',
-        ]
-    ]); ?>
-    <?= $form->field($model, 'end_timestamp')->widget(DateTimePicker::classname(), [
-        'options' => ['placeholder' => '结束时间'],
-        'pluginOptions' => [
-            'autoclose' => true,
-            'todayHighlight' => true,
-            'format' => 'yyyy-mm-dd hh:ii',
-        ]
-    ]); ?>
     <?= $form->field($model, 'quantity')->textInput(['maxlength' => true,'placeholder' =>'卡券库存数量']) ?>
     <?= $form->field($model, 'custom_url_name')->textInput(['maxlength' => true,'placeholder' =>'自定义跳转外链的入口名字']) ?>
     <?= $form->field($model, 'custom_url')->textInput(['maxlength' => true,'placeholder' =>'自定义跳转URL']) ?>
@@ -82,11 +66,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 $('#lecture-title').focus();
                 return false;
             }
-            if($.trim($('#lecture-content').val()) == ''){
-                alert('请输入描述！');
-                $('#lecture-content').focus();
-                return false;
-            }
+            // if($.trim($('#lecture-content').val()) == ''){
+            //     alert('请输入描述！');
+            //     $('#lecture-content').focus();
+            //     return false;
+            // }
             if($.trim($('#lecture-speaker').val()) == ''){
                 alert('请输入讲座人！');
                 $('#lecture-speaker').focus();

@@ -109,8 +109,8 @@ class LecturereleaseController extends Controller
                         "description" => $params['Lecture']['description'],
                         "date_info" => array(
                             "type" => 1,
-                            "begin_timestamp" => strtotime($params['Lecture']['begin_timestamp']),
-                            "end_timestamp" => strtotime($params['Lecture']['end_timestamp']),
+                            "begin_timestamp" => time(),
+                            "end_timestamp" => strtotime($params['Lecture']['datetime']),
                         ),
                         "sku" => array(
                             "quantity" => $params['Lecture']['quantity'],
