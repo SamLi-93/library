@@ -77,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         ['class' => 'yii\grid\ActionColumn',
             'header' => '操作',
-            'template' => '{edit} {delete}',
+            'template' => '{edit} {delete} {view}',
             'buttons' => [
                 'edit' => function ($url, $model, $key) {
                     $options = [
@@ -96,6 +96,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::a('删除', $url, ['onclick' => 'return check()', 'class' => 'btn btn-success btn-sm', 'id' => 'delete-btn']);
 
                 },
+                'view' => function ($url, $model, $key) {
+                    $options = [
+                        'class' => 'btn btn-success',
+                    ];
+                    $url = Url::to(['lecturerelease/view', 'id' => $model['card_id']]);
+                    return Html::a('卡券详情', $url, [ 'class' => 'btn btn-success btn-sm']);
+
+                }
             ],
         ],
     ],

@@ -5,31 +5,23 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "project".
+ * This is the model class for table "wechat_source".
  *
  * @property integer $id
- * @property string $projectname
- * @property string $school
- * @property integer $over
- * @property integer $free
- * @property string $teacher
+ * @property string $title
+ * @property string $thumb_media_id
+ * @property string $author
+ * @property integer $digest
+ * @property integer $show_cover_pic
+ * @property string $content
+ * @property string $content_source_url
  * @property integer $time
- * @property integer $is_neibu
- * @property integer $endtime
- * @property string $original_path
- * @property string $making_path
- * @property string $uploadname
- * @property integer $pid
+ * @property string $file
+ * @property integer $isdeleted
+ * @property integer $status
  */
 class Source extends \yii\db\ActiveRecord
 {
-    public $title;
-    public $author;
-    public $thumb_media_id;
-    public $digest;
-    public $show_cover_pic;
-    public $content;
-    public $content_source_url;
     /**
      * @inheritdoc
      */
@@ -44,11 +36,10 @@ class Source extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['digest', 'show_cover_pic','time'], 'integer'],
-            [['title', 'author','thumb_media_id','content_source_url'], 'string', 'max' => 255],
-            [['content'], 'filter','filter' => function($value) {
-                return ($value);
-            }  ],
+            [['author', 'content_source_url'], 'required'],
+            [['digest', 'show_cover_pic', 'time', 'isdeleted', 'status'], 'integer'],
+            [['content'], 'string'],
+            [['title', 'thumb_media_id', 'author', 'content_source_url', 'file'], 'string', 'max' => 255],
         ];
     }
 
@@ -60,14 +51,16 @@ class Source extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => '标题',
-            'author' => '作者',
             'thumb_media_id' => '图片素材',
+            'author' => '作者',
             'digest' => '消息描述',
             'show_cover_pic' => '内容展示缩略图',
             'content' => '内容',
             'content_source_url' => '原文链接',
-            'file' => '缩略图'
+            'time' => 'Time',
+            'file' => '缩略图',
+            'isdeleted' => 'Isdeleted',
+            'status' => 'Status',
         ];
     }
-
 }

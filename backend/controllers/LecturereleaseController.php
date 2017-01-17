@@ -49,7 +49,7 @@ class LecturereleaseController extends Controller
             $sql_parms .= " and id = '" . $query_parms['title'] . "'";
         }
 
-        $sql = "select id,title,content,speaker,datetime,address from lecture " . $sql_parms . " order by id desc";
+        $sql = "select id,title,content,speaker,datetime,address,card_id from lecture " . $sql_parms . " order by id desc";
 
         $command = Yii::$app->db->createCommand('SELECT COUNT(*) FROM lecture ' . $sql_parms);
         $count = $command->queryScalar();
@@ -140,7 +140,18 @@ class LecturereleaseController extends Controller
         Yii::$app->cache->delete('index');
         return $this->redirect(['index']);
     }
+    function actionView(){
 
+        $query = Yii::$app->request->queryParams;
+        $list =  array();
+        if(!empty($query['id'])){
+            $info = \LaneWeChat\Core\Card::getcardinfo($query['id']);
+            $list = $info['list'];
+        }
+        return $this->render('view',[
+            'list' => $list
+        ]);
+    }
 }
 
 

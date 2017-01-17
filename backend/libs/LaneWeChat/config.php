@@ -23,8 +23,8 @@ define('ENCODING_AES_KEY', "MqAuKoex6FyT5No0OcpRyCicThGs0P1vz4mJ2gwvvkF");
 /*
  * 开发者配置
  */
-define("WECHAT_APPID", 'wx15f088aac7be2e98');
-define("WECHAT_APPSECRET", '2ff32d4c578850ba75c98d27463fa0d4');
+define("WECHAT_APPID", 'wxd8b0c84c1425ea57');
+define("WECHAT_APPSECRET", 'a4264fb3f6eca52c34c6717e0d341e6c');
 
 /*
  * SAE平台配置

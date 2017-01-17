@@ -18,6 +18,7 @@ use yii\data\ActiveDataProvider;
 use yii\grid\GridView;
 use app\models\Source;
 use app\models\Material;
+use app\models\SourceSearch;
 //微信框架引入方式
 include dirname(dirname(__FILE__)).'/libs/LaneWeChat/lanewechat.php';
 include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/source.lib.php';
@@ -28,18 +29,32 @@ include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/usermanage.lib.php';
 class SourceController extends Controller
 {
 
-    public function behaviors()
+    private $digest = [];
+
+    /*public function beforeAction($action)
     {
-        return [
-        ];
-    }
+        if (empty(Yii::$app->user->identity)) {
+            return $this->redirect(['/default/login']);
+        }
+        return parent::beforeAction($action);
+    }*/
     public $enableCsrfValidation = false;
 
     function actionIndex(){
+        $searchModel = new SourceSearch();
         $this->layout = 'main';
         $query = Yii::$app->request->queryParams;
-        $sql = "select * from wechat_source where isdeleted = 0 order by id desc";
-
+        $sql = "select * from wechat_source where isdeleted = 0 ";
+        if(!empty($query['SourceSearch']['digest'])){
+            $sql .= " and digest = ".$query['SourceSearch']['digest'];
+        }
+        if(!empty($query['SourceSearch']['show_cover_pic'])){
+            $sql .= " and show_cover_pic = ".$query['SourceSearch']['show_cover_pic'];
+        }
+        if(!empty($query['SourceSearch']['title'])){
+            $sql .= " and title like '%".$query['SourceSearch']['title']."%'";
+        }
+        $sql .= " order by id desc";
         $command = Yii::$app->db->createCommand('SELECT COUNT(*) FROM wechat_source  order by id desc');
         $count = $command->queryScalar();
 
@@ -61,8 +76,10 @@ class SourceController extends Controller
         ]);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'query' => $query
+            'query' => $query,
+            'digest' => $this->digest
         ]);
     }
 
@@ -148,7 +165,6 @@ class SourceController extends Controller
                     $result = \LaneWeChat\Core\AdvancedBroadcast::sentNewsByOpenId($userlist,$news['media_id']);
                     //if($result)
                     if($result['errcode']==0){
-                        $id_str = implode($params['id'], ',');
                         $command = $conn->createCommand("update wechat_source set status = 1 where id in(".$id_str.")");
                         $data = $command->execute();
                     }
@@ -219,7 +235,28 @@ class SourceController extends Controller
         print_r($list);
         return $this->render('list', ['list' => $list]);
     }
-    
+    function actionSendmessage(){
+        $query = Yii::$app->request->post();
+        $id_arr = $query['id'];
+        if(count($id_arr)>0){
+            $id_str = implode($id_arr, ',');
+            $conn = Yii::$app->db;
+            $command = $conn->createCommand("select * from wechat_source where isdeleted=0 and id in (".$id_str.") order by id desc");
+            $data = $command->queryAll();
+            $news = \LaneWeChat\Core\Media::addnews($data);
+            $users = \LaneWeChat\Core\UserManage::getFansList();
+            $userlist = $users['data']['openid'];
+            $result = \LaneWeChat\Core\AdvancedBroadcast::sentNewsByOpenId($userlist,$news['media_id']);
+            if($result['errcode']==0){
+                $command = $conn->createCommand("update wechat_source set status = 1 where id in(".$id_str.")");
+                $data = $command->execute();
+                echo 1;exit;
+            }else{
+                echo 0;exit;
+            }
+        }
+        echo 0;exit;
+    }
     function actionGetcount(){
         
         $list = \LaneWeChat\Core\Media::getmaterialcount();

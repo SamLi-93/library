@@ -30,7 +30,7 @@ class Lecture extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['content'], 'string'],
+            [['content','card_id'], 'string'],
             [['datetime'], 'required'],
             [['title', 'address'], 'string', 'max' => 255],
             [['speaker'], 'string', 'max' => 64],
@@ -49,6 +49,7 @@ class Lecture extends \yii\db\ActiveRecord
             'speaker' => '讲座人',
             'datetime' => '讲座时间',
             'address' => '讲座地点',
+            'card_id' => '卡券'
         ];
     }
 }

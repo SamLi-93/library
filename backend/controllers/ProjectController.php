@@ -52,7 +52,7 @@ class ProjectController extends Controller
 //        $this->pro_teacher = $pro_info->getTeacherName();
 //        $this->pro_over = $pro_info->getOverList();
 
-        // $search_info = new VideoShoot();
+        //$search_info = new VideoShoot();
         $course_info = new VideoMaking();
         $pro_info = new Project();
         $person = new SmsAdmin();

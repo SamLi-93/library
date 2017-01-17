@@ -161,16 +161,19 @@ class Card{
      * @param $code 
      * @return string
      */
-    public static function getcardinfo($card_id){
+    public static function getcardinfo($card_id,$begin='',$end=''){
         //获取ACCESS_TOKEN
         $accessToken = AccessToken::getAccessToken();
         $queryUrl = 'https://api.weixin.qq.com/datacube/getcardcardinfo?access_token='.$accessToken;
+        $begin_date = !empty($begin)?$begin:date('Y-m-d',time()-60*24*60*60);
+        //结束时间默认为当前的前一天，否则报错
+        $end_date = !empty($end)?$end:date('Y-m-d',time()-24*60*60);
         //开始
         $template = array(
             'card_id'=> $card_id,
             'cond_source' => 1,
-            "begin_date" => "2015-06-15",
-            "end_date" => "2015-06-30"
+            "begin_date" => $begin_date,
+            "end_date" => $end_date
         );
         $template = json_encode($template);
         return Curl::callWebServer($queryUrl, $template, 'POST', 1 , 0);

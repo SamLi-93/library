@@ -14,7 +14,7 @@ use app\models\Lecture;
 //微信框架引入方式
 include dirname(dirname(__FILE__)).'/libs/LaneWeChat/lanewechat.php';
 include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/card.lib.php';
-
+include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/templatemessage.lib.php';
 class CardController extends \yii\web\Controller
 {
     public function init()
@@ -114,4 +114,17 @@ class CardController extends \yii\web\Controller
         return $this->render('index');
     }
 
+    function actionGetinfo(){
+
+    	$query = Yii::$app->request->queryParams;
+        $id = $query['id'];
+        $list =  array();
+        if(!empty($id)){
+       		$info = \LaneWeChat\Core\Card::getcardinfo($id);
+       		$list = $info['list'];
+        }
+       	return $this->render('index',[
+            'list' => $list
+        ]);
+    }
 }
