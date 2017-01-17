@@ -16,9 +16,9 @@ define('LANEWECHAT_VERSION_DATE', '2014-11-05');
 /*
  * 服务器配置，详情请参考@link http://mp.weixin.qq.com/wiki/index.php?title=接入指南
  */
-define("WECHAT_URL", 'http://api.mynep.com/frontend/libs/LaneWeChat/lanewechat.php');
-define('WECHAT_TOKEN', 'mynep');
-define('ENCODING_AES_KEY', "MqAuKoex6FyT5No0OcpRyCicThGs0P1vz4mJ2gwvvkF");
+define("WECHAT_URL", 'http://live.mynep.com/weixin/index.php?controller=wxresponse&action=index');
+define('WECHAT_TOKEN', '8vEcHl8xQ4MHkYg5Fc799o1GfpMFwcOC');
+define('ENCODING_AES_KEY', "");
 
 /*
  * 开发者配置
@@ -29,8 +29,8 @@ define("WECHAT_APPSECRET", 'a4264fb3f6eca52c34c6717e0d341e6c');
 /*
  * SAE平台配置
  */
-define("HTTP_ACCESSKEY", '04xmzo3zm5');
-define("HTTP_APPNAME", 'imcustom4test');
+/*define("HTTP_ACCESSKEY", '04xmzo3zm5');
+define("HTTP_APPNAME", 'imcustom4test');*/
 
 ////-----引入系统所需类库-------------------
 ////引入错误消息类

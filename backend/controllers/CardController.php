@@ -70,7 +70,7 @@ class CardController extends \yii\web\Controller
         		'base_info' => array(
         			"logo_url" => "http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0", 
 	                "brand_name" => "feee票务公司1", 
-	                "code_type" => "CODE_TYPE_ONLY_QRCODE", 
+	                "code_type" => "CODE_TYPE_QRCODE", 
 	                "title" => "lixin会议dfd", 
 	                "color" => "Color010", 
 	                "notice" => "使用时向检票员出示此券", 

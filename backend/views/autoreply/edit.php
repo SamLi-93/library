@@ -13,6 +13,15 @@ $this->params['breadcrumbs'][] = ['label' => 'Project', 'url' =>  ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 //$this->params['breadcrumbs'][] = ['label' => $model->projectname, 'url' => ['view', 'id' => $model->id]];
 ?>
+<script type="text/javascript" src="<?php echo Yii::$app ->request -> baseUrl?>/ckeditor/ckeditor.js">
+
+</script>
+<style type="text/css">
+    #cke_indexkeywords-content{
+        width: 600px;
+    }
+</style>
+
 <div class="center subject_name">
     <span>自动回复</span>
 </div>
@@ -34,12 +43,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'keyword')->textInput(['maxlength' => true,'placeholder' =>'关键字']) ?>
     <?= $form->field($model, 'reply_type')->widget(Select2::classname(), ['data' => ['1' => '文本', '2' => '图片','3' => '图文'], ]); ?>
     <?= $form->field($model, 'content')->textInput(['maxlength' => true,'placeholder' =>'回复内容']) ?>
-    <?= $form->field($model, 'title')->textInput(['maxlength' => true,'placeholder' =>'标题']) ?>
     <?= $form->field($model, 'summary')->textInput(['maxlength' => true,'placeholder' =>'简介']) ?>
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true,'placeholder' =>'标题']) ?>
 
     <div class="image_div" >
         <div class="fleft"><?= Html::a($model['imageFiles'], '#', ['title' => '图片']);?></div>
-        <div class="image_delete"><?= Html::a('删除', '#', ['onclick'=> 'return check('.$model['imageFiles'].')', 'class' => 'btn-sm', 'id' => 'delete-iamge' ]);?></div>
     </div>
 
     <?= $form->field($model, 'imageFiles')->fileInput(['multiple' => false, 'accept' => 'image/*']) ?>
@@ -120,5 +128,36 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         })
     })
+
+    CKEDITOR.replace( 'indexkeywords-content',
+        {
+
+            // Define font sizes in percent values.
+            fontSize_sizes : "30/30%;50/50%;100/100%;120/120%;150/150%;200/200%;300/300%",
+            toolbar :
+                [
+                    ['Source', '-', 'Save','NewPage','-','Undo','Redo'],
+                    ['Find','Replace','-','SelectAll','RemoveFormat'],
+                    ['Link', 'Unlink', 'Image', 'Smiley','SpecialChar'],
+                    '/',
+                    ['Bold', 'Italic','Underline'],
+                    ['FontSize'],
+                    ['TextColor'],
+                    ['NumberedList','BulletedList','-','Blockquote'],
+                    ['Maximize']
+                ],
+            // Strip CKEditor smileys to those commonly used in BBCode.
+            smiley_images :
+                [
+                    'regular_smile.gif','sad_smile.gif','wink_smile.gif','teeth_smile.gif','tounge_smile.gif',
+                    'embaressed_smile.gif','omg_smile.gif','whatchutalkingabout_smile.gif','angel_smile.gif','shades_smile.gif',
+                    'cry_smile.gif','kiss.gif'
+                ],
+            smiley_descriptions :
+                [
+                    'smiley', 'sad', 'wink', 'laugh', 'cheeky', 'blush', 'surprise',
+                    'indecision', 'angel', 'cool', 'crying', 'kiss'
+                ]
+        } );
 
 </script>

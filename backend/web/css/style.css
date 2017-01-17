@@ -20,9 +20,11 @@ a:visited {
 }
 
 .table{
-    margin-top: 20px;
-    width: 80%;
-    margin: 0 auto;
+        /* margin-top: 20px; */
+    width: 90%;
+    /* margin: 0 auto; */
+    /* padding-left: 10px; */
+    margin-left: 20px;
 }
 .pagination{
     float: right;
@@ -31,12 +33,10 @@ a:visited {
 
 .subject_name{
     height: 47px;
-    width: 70%;
+    width: 90%;
     margin: 0px auto;
-    margin-left: 40px;
-    float: left;
+    margin-left: 20px;
     border-bottom: 1px solid #dddddd;
-    margin-bottom: 30px;
 }
 .subject_name span {
     line-height: 48px;
@@ -163,5 +163,63 @@ a:visited {
 }
 .list_table>thead>tr>th:first-child {
     width: 70px;
+}
+.sims_left{
+    width: 12%;
+}
+.main-content{
+    float: left;
+    width: 88%;
+}
+.widget-box{
+    width: 100%;
+}
+@media screen and (max-width: 1800px) {
+    .sims_left{
+        width: 16%;
+    }
+    .main-content{
+        width: 84%;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .sims_left{
+        width: 18%;
+    }
+    .main-content{
+        width: 82%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .sims_left{
+        width: 20%;
+    }
+    .main-content{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .sims_left{
+        width: 22%;
+    }
+    .main-content{
+        width: 78%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .sims_left{
+        width: 24%;
+    }
+    .main-content{
+        width: 76%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .sims_left{
+        width: 26%;
+    }
+    .main-content{
+        width: 74%;
+    }
 }
 

@@ -54,17 +54,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'header' => '消息描述',
             'attribute' => 'digest',
             'value' => function ($model) {
-                if ($model['digest'] == 0) {
-                    return '否';
-                }
-                if ($model['digest'] == 1) {
-                    return '是';
-                }
                 return $model['digest'];
             }
         ],
         [
-            'header' => '是否内容展示封面',
+            'header' => '内容展示封面',
             'attribute' => 'show_cover_pic',
             'value' => function ($model) {
                 if ($model['show_cover_pic'] == 0) {
@@ -76,13 +70,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 return $model['show_cover_pic'];
             }
         ],
-        [
+        /*[
             'header' => '原文链接',
             'attribute' => 'content_source_url',
             'value' => function ($model) {
                 return $model['content_source_url'];
             }
-        ],
+        ],*/
         [
             'header' => '是否发送',
             'format' => 'raw',
@@ -150,7 +144,13 @@ $this->params['breadcrumbs'][] = $this->title;
                         data: {"id": check_val},
                         url: "<?= Url::to(['source/sendmessage']);?>",
                         success: function (data) {
-                            console.log(data);
+                            if(data==1){
+                                alert('发送成功');
+                                location.reload();
+                            }else{
+                                alert('发送失败');
+
+                            }
 
                         }
                     });

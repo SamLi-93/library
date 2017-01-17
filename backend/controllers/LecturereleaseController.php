@@ -16,6 +16,7 @@ use yii\data\SqlDataProvider;
 use yii\web\Controller;
 use yii\grid\GridView;
 use yii\data\ActiveDataProvider;
+use yii\web\UploadedFile;
 
 class LecturereleaseController extends Controller
 {
@@ -79,16 +80,66 @@ class LecturereleaseController extends Controller
 
     public function actionCreate()
     {
+        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/lanewechat.php';
+        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/card.lib.php';
+        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/templatemessage.lib.php';
         $this->layout = 'main';
         $model = new Lecture();
         if (!empty(Yii::$app->request->post())) {
             $params = Yii::$app->request->post();
+            $model->logo_url = UploadedFile::getInstance($model, 'logo_url');
+            if (!empty($model->logo_url)) {
+                $url = Yii::$app->basePath .'/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+                $model->logo_url->saveAs($url);
+                $logo_url = 'http://samlovesammy/library/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+            } else{
+                $logo_url = "http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0";
+            }
+            $content = array(
+                'card_type' => "MEETING_TICKET",
+                'meeting_ticket' => array(
+                    'base_info' => array(
+                        "logo_url" => $logo_url,
+                        "brand_name" => $params['Lecture']['brand_name'],
+                        "code_type" => "CODE_TYPE_ONLY_QRCODE",
+                        "title" => $params['Lecture']['title'],
+                        "color" => "Color010",
+                        "notice" => $params['Lecture']['notice'],
+                        "service_phone" => $params['Lecture']['service_phone'],
+                        "description" => $params['Lecture']['description'],
+                        "date_info" => array(
+                            "type" => 1,
+                            "begin_timestamp" => strtotime($params['Lecture']['begin_timestamp']),
+                            "end_timestamp" => strtotime($params['Lecture']['end_timestamp']),
+                        ),
+                        "sku" => array(
+                            "quantity" => $params['Lecture']['quantity'],
+                        ),
+                        "get_limit" => 3,
+                        "use_custom_code" => false,
+                        "bind_openid" => false,
+                        "can_share" => true,
+                        "can_give_friend" => true,
+                        "custom_url_name" => $params['Lecture']['custom_url_name'],
+                        "custom_url" => $params['Lecture']['custom_url'],
+                        "custom_url_sub_title" => $params['Lecture']['custom_url_sub_title'],
+                    ),
+                    'meeting_detail' => "讲座时间:" .$params['Lecture']['datetime'] . "讲座地点:" .$params['Lecture']['address']
+                )
+            );
+            $res = \LaneWeChat\Core\Card::createcard($content);
+            if($res['card_id']){
+                //$this->card_id = $res['card_id'];
+                $cardobj = \LaneWeChat\Core\Card::getcard($res['card_id']);
+            }
+
             $model->setAttributes([
                 'content' => $params['Lecture']['title'],
                 'speaker' => $params['Lecture']['speaker'],
                 'title' => $params['Lecture']['title'],
                 'datetime' => intval(strtotime($params['Lecture']['datetime'])),
                 'address' => $params['Lecture']['address'],
+                'card_id' => $res['card_id']
             ]);
         }
 
@@ -104,6 +155,9 @@ class LecturereleaseController extends Controller
 
     public function actionEdit()
     {
+        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/lanewechat.php';
+        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/card.lib.php';
+        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/templatemessage.lib.php';
         $id = Yii::$app->request->get('id');
         $model = Lecture::findOne($id);
         if(empty($model['datetime'])) { $model['datetime'] = null; }
@@ -111,6 +165,52 @@ class LecturereleaseController extends Controller
 
         if (!empty(Yii::$app->request->post())) {
             $params = Yii::$app->request->post();
+            $model->logo_url = UploadedFile::getInstance($model, 'logo_url');
+            if (!empty($model->logo_url)) {
+                $url = Yii::$app->basePath .'/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+                $model->logo_url->saveAs($url);
+                $logo_url = 'http://samlovesammy/library/uploads/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
+            } else{
+                $logo_url = "http://mmbiz.qpic.cn/mmbiz/iaL1LJM1mF9aRKPZJkmG8xXhiaHqkKSVMMWeN3hLut7X7hicFNjakmxibMLGWpXrEXB33367o7zHN0CwngnQY7zb7g/0";
+            }
+
+            $content = array(
+                'card_type' => "MEETING_TICKET",
+                'meeting_ticket' => array(
+                    'base_info' => array(
+                        "logo_url" => $logo_url,
+                        "brand_name" => $params['Lecture']['brand_name'],
+                        "code_type" => "CODE_TYPE_ONLY_QRCODE",
+                        "title" => $params['Lecture']['title'],
+                        "color" => "Color010",
+                        "notice" => $params['Lecture']['notice'],
+                        "service_phone" => $params['Lecture']['service_phone'],
+                        "description" => $params['Lecture']['description'],
+                        "date_info" => array(
+                            "type" => 1,
+                            "begin_timestamp" => strtotime($params['Lecture']['begin_timestamp']),
+                            "end_timestamp" => strtotime($params['Lecture']['end_timestamp']),
+                        ),
+                        "sku" => array(
+                            "quantity" => $params['Lecture']['quantity'],
+                        ),
+                        "get_limit" => 3,
+                        "use_custom_code" => false,
+                        "bind_openid" => false,
+                        "can_share" => true,
+                        "can_give_friend" => true,
+                        "custom_url_name" => $params['Lecture']['custom_url_name'],
+                        "custom_url" => $params['Lecture']['custom_url'],
+                        "custom_url_sub_title" => $params['Lecture']['custom_url_sub_title'],
+                    ),
+                    'meeting_detail' => "讲座时间:" .$params['Lecture']['datetime'] . "讲座地点:香格里拉" .$params['Lecture']['address']
+                )
+            );
+            $res = \LaneWeChat\Core\Card::createcard($content);
+            if($res['card_id']){
+                //$this->card_id = $res['card_id'];
+                $cardobj = \LaneWeChat\Core\Card::getcard($res['card_id']);
+            }
             $model->setAttributes([
                 'title' => $params['Lecture']['title'],
                 'content' => $params['Lecture']['content'],

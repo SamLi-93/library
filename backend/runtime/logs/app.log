@@ -37532,3 +37532,546 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1484620288.5071
     'REQUEST_TIME' => 1484620288
 ]
+2017-01-17 13:27:00 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\views\layouts\main.php:35
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\SourceController.php:83
+2017-01-17 13:26:59 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+    'advanced-backend' => 'cmdn460514jsull5jrqk9b11l2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1912'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/source/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/source/index'
+    'REMOTE_PORT' => '57212'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; PHPSESSID=vokfrc0vsli7ojpilptms2l041; advanced-backend=cmdn460514jsull5jrqk9b11l2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/autoreply/create'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484630819.2914
+    'REQUEST_TIME' => 1484630819
+]
+2017-01-17 13:30:56 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\views\layouts\main.php:35
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\SourceController.php:141
+2017-01-17 13:30:56 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+    'advanced-backend' => 'cmdn460514jsull5jrqk9b11l2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1912'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/source/create'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/source/create'
+    'REMOTE_PORT' => '57269'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; PHPSESSID=vokfrc0vsli7ojpilptms2l041; advanced-backend=cmdn460514jsull5jrqk9b11l2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/source/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484631056.058
+    'REQUEST_TIME' => 1484631056
+]
+2017-01-17 13:35:46 [127.0.0.1][][cmdn460514jsull5jrqk9b11l2][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: autoreply/index.js.map' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index.js.map', Array)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('autoreply/index...', Array)
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message '页面未找到。' in D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#2 {main}
+2017-01-17 13:35:46 [127.0.0.1][][cmdn460514jsull5jrqk9b11l2][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+    'advanced-backend' => 'cmdn460514jsull5jrqk9b11l2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1912'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/autoreply/index.js.map'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/autoreply/index.js.map'
+    'REMOTE_PORT' => '57347'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; PHPSESSID=vokfrc0vsli7ojpilptms2l041; advanced-backend=cmdn460514jsull5jrqk9b11l2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484631346.2606
+    'REQUEST_TIME' => 1484631346
+]
+2017-01-17 13:55:32 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php:28
+2017-01-17 13:55:32 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+    'advanced-backend' => 'cmdn460514jsull5jrqk9b11l2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1860'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'REMOTE_PORT' => '57615'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; PHPSESSID=vokfrc0vsli7ojpilptms2l041; advanced-backend=cmdn460514jsull5jrqk9b11l2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lecturerelease/create'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484632532.5754
+    'REQUEST_TIME' => 1484632532
+]
+2017-01-17 13:55:55 [127.0.0.1][-][-][warning][yii\web\Session::init] Session is already started
+    in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php:28
+2017-01-17 13:55:55 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+    'advanced-backend' => 'cmdn460514jsull5jrqk9b11l2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1860'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/lecturerelease/index'
+    'REMOTE_PORT' => '57618'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; PHPSESSID=vokfrc0vsli7ojpilptms2l041; advanced-backend=cmdn460514jsull5jrqk9b11l2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/bookpayment/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484632555.1357
+    'REQUEST_TIME' => 1484632555
+]
+2017-01-17 14:17:15 [127.0.0.1][][cmdn460514jsull5jrqk9b11l2][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: card_id' in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php:134
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php(134): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'D:\\phpstudy\\WWW...', 134, Array)
+#1 [internal function]: backend\controllers\LecturereleaseController->actionCreate()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('lecturerelease/...', Array)
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#8 {main}
+2017-01-17 14:17:13 [127.0.0.1][][cmdn460514jsull5jrqk9b11l2][info][application] $_POST = [
+    '_csrf-backend' => 'TU9LeTRoaVcIDBtAawQxbzgFEgx3Ny0ZHB0GHGYhKxghIiohcjIGAg=='
+    'Lecture' => [
+        'title' => 'tset'
+        'content' => 'teste'
+        'speaker' => 'test'
+        'datetime' => '2017-01-17 14:30'
+        'address' => 'tset'
+        'brand_name' => 'test'
+        'notice' => 'test'
+        'service_phone' => '2333'
+        'description' => 'test'
+        'begin_timestamp' => '2017-01-16 00:00'
+        'end_timestamp' => '2017-01-17 13:15'
+        'quantity' => '1111'
+        'custom_url_name' => 'tset'
+        'custom_url' => 'www.baidu.com'
+        'custom_url_sub_title' => 'test'
+    ]
+]
+
+$_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+    'advanced-backend' => 'cmdn460514jsull5jrqk9b11l2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1912'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/lecturerelease/create'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/lecturerelease/create'
+    'REMOTE_PORT' => '57796'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; PHPSESSID=vokfrc0vsli7ojpilptms2l041; advanced-backend=cmdn460514jsull5jrqk9b11l2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lecturerelease/create'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '566'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484633833.6368
+    'REQUEST_TIME' => 1484633833
+]
+2017-01-17 14:20:57 [127.0.0.1][][cmdn460514jsull5jrqk9b11l2][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: logo_url' in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php:105
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\LecturereleaseController.php(105): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\phpstudy\\WWW...', 105, Array)
+#1 [internal function]: backend\controllers\LecturereleaseController->actionCreate()
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#5 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('lecturerelease/...', Array)
+#6 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#8 {main}
+2017-01-17 14:20:56 [127.0.0.1][][cmdn460514jsull5jrqk9b11l2][info][application] $_POST = [
+    '_csrf-backend' => 'WVJDdVNoR3IcERNMDAQfSiwYGgAQNwM8CAAOEAEhBT01PyItFTIoJw=='
+    'Lecture' => [
+        'title' => 'fff'
+        'content' => 'f'
+        'speaker' => 'qq'
+        'datetime' => '2017-01-18 06:30'
+        'address' => 'qq'
+        'brand_name' => 'qqq'
+        'logo_url' => ''
+        'notice' => 'qq'
+        'service_phone' => '1221321321321'
+        'description' => 'qqq'
+        'begin_timestamp' => '2017-01-17 00:00'
+        'end_timestamp' => '2017-01-20 00:00'
+        'quantity' => '11111'
+        'custom_url_name' => 'qqq'
+        'custom_url' => 'www.qq.com'
+        'custom_url_sub_title' => 'tset'
+    ]
+]
+
+$_FILES = [
+    'Lecture' => [
+        'name' => [
+            'logo_url' => 'Koala.jpg'
+        ]
+        'type' => [
+            'logo_url' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'logo_url' => 'C:\\Windows\\php7DFB.tmp'
+        ]
+        'error' => [
+            'logo_url' => 0
+        ]
+        'size' => [
+            'logo_url' => 780831
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => 'fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU\";}'
+    'PHPSESSID' => 'vokfrc0vsli7ojpilptms2l041'
+    'advanced-backend' => 'cmdn460514jsull5jrqk9b11l2'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 25
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1912'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/lecturerelease/create'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/lecturerelease/create'
+    'REMOTE_PORT' => '57842'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=fe808976dada565a4dd20b806010d0cc7ef1ad1fa48437caaddea884b5db3aa0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22ECP9_lX8uJYuC_DNQRMeRIBOlmaXFZoU%22%3B%7D; PHPSESSID=vokfrc0vsli7ojpilptms2l041; advanced-backend=cmdn460514jsull5jrqk9b11l2'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/lecturerelease/create'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryyLcUxHWREaiGOwcb'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://127.0.0.1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '782981'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484634056.7096
+    'REQUEST_TIME' => 1484634056
+]

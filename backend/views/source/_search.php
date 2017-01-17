@@ -44,8 +44,8 @@ use yii\helpers\Url;
                         <div class="form-group">
                             <?= Html::submitButton("查询", ["class" => "btn btn-primary btn-sm"]) ?>
                             <?= Html::a("重置", ['index'], ["class" => "btn btn-primary btn-sm"]) ?>
-                            <?= Html::a('添加消息', ['create'], ['class' => 'btn btn-sm btn-success'])?>
-                            <?= Html::label('发送消息', '', ['class' => 'btn btn-sm btn-success','onclick'=>'send()'])?>
+                            <?= Html::a('添加素材', ['create'], ['class' => 'btn btn-sm btn-success'])?>
+                            <?= Html::label('发送素材', '', ['class' => 'btn btn-sm btn-success','onclick'=>'send()'])?>
                         </div>
                     </td>
                 </tr>

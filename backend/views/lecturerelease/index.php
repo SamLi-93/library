@@ -100,8 +100,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     $options = [
                         'class' => 'btn btn-success',
                     ];
-                    $url = Url::to(['lecturerelease/view', 'id' => $model['card_id']]);
-                    return Html::a('卡券详情', $url, [ 'class' => 'btn btn-success btn-sm']);
+                    if(empty($model['card_id'])){
+                        return "";
+                    }else{
+                        $url = Url::to(['lecturerelease/view', 'id' => $model['card_id']]);
+                        return Html::a('卡券详情', $url, [ 'class' => 'btn btn-success btn-sm']);
+                    }
 
                 }
             ],

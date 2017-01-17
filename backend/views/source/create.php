@@ -12,9 +12,7 @@ $this->title = '添加项目';
 $this->params['breadcrumbs'][] = ['label' => 'Menus', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<script type="text/javascript" src="<?php echo Yii::$app ->request -> baseUrl?>/ckeditor/ckeditor.js">
-
-</script>
+<script type="text/javascript" src="<?php echo Yii::$app ->request -> baseUrl?>/ckeditor/ckeditor.js"></script>
 <style type="text/css">
     #cke_source-content{
         width: 600px;
@@ -23,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="center subject_name">
     <span>消息添加</span>
 </div>
-<div class="col-xs-12">
+<div class="col-xs-12" style="width:100%;padding-top: 10px;margin: 0px;">
 
     <?php $form = ActiveForm::begin([
         'action' => ['create'],
@@ -31,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'id' => 'my_form',
         'options' => ['class' => 'form-horizontal'],
         'fieldConfig' => [
-            'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
+            'template' => "{label}\n<div class=\"col-lg-2\">{input}</div>\n<div class=\"col-lg-2\">{error}</div>",
             'labelOptions' => ['class' => 'col-lg-1 control-label'],
         ],
     ]); ?>
@@ -39,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'author')->textInput(['maxlength' => true,'placeholder' =>'']) ?>
     <?//= $form->field($model, 'thumb_media_id')->widget(Select2::classname(), ['data' => $list, ]); ?>
     <?= $form->field($model, 'file')->fileInput(['placeholder' =>'缩略图']) ?>
-    <?= $form->field($model, 'digest')->widget(Select2::classname(), ['data' => ['0' => '否', '1' => '是'], ]); ?>
+    <?= $form->field($model, 'digest')->textInput(['maxlength' => true,'placeholder' =>'']); ?>
     <?= $form->field($model, 'show_cover_pic')->widget(Select2::classname(), ['data' => ['0' => '否', '1' => '是'], ]); ?>
     <?= $form->field($model, 'content')->textarea(['maxlength' => true,'placeholder' =>'','class'=>'content']) ?>
     <?= $form->field($model, 'content_source_url')->textInput(['maxlength' => true,'placeholder' =>'']) ?>
@@ -80,35 +78,5 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         });
     });
-
-CKEDITOR.replace( 'source-content',
-                {
-                    
-                    // Define font sizes in percent values.
-                    fontSize_sizes : "30/30%;50/50%;100/100%;120/120%;150/150%;200/200%;300/300%",
-                    toolbar :
-                    [
-                        ['Source', '-', 'Save','NewPage','-','Undo','Redo'],
-                        ['Find','Replace','-','SelectAll','RemoveFormat'],
-                        ['Link', 'Unlink', 'Image', 'Smiley','SpecialChar'],
-                        '/',
-                        ['Bold', 'Italic','Underline'],
-                        ['FontSize'],
-                        ['TextColor'],
-                        ['NumberedList','BulletedList','-','Blockquote'],
-                        ['Maximize']
-                    ],
-                    // Strip CKEditor smileys to those commonly used in BBCode.
-                    smiley_images :
-                    [
-                        'regular_smile.gif','sad_smile.gif','wink_smile.gif','teeth_smile.gif','tounge_smile.gif',
-                        'embaressed_smile.gif','omg_smile.gif','whatchutalkingabout_smile.gif','angel_smile.gif','shades_smile.gif',
-                        'cry_smile.gif','kiss.gif'
-                    ],
-                    smiley_descriptions :
-                    [
-                        'smiley', 'sad', 'wink', 'laugh', 'cheeky', 'blush', 'surprise',
-                        'indecision', 'angel', 'cool', 'crying', 'kiss'
-                    ]
-            } );
+CKEDITOR.replace( 'source-content', {extraPlugins : 'autogrow',removePlugins : 'resize'});
 </script>

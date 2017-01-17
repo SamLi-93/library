@@ -102,6 +102,7 @@ class AutoreplyController extends Controller
                     //文件绝对地址
                     $url = Yii::$app->basePath .'/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $model->imageFiles->saveAs($url);
+                    $url_db = 'http://samlovesammy/library/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $type = 'image';//图片（image）、语音（voice）、视频（video）和缩略图（thumb）
                     $upload = \LaneWeChat\Core\Media::addmaterial($url,$type);
                     //$media_id = $upload['media_id'];
@@ -117,7 +118,7 @@ class AutoreplyController extends Controller
                         'keyword' => $params['IndexKeywords']['keyword'],
                         'reply_type' => $params['IndexKeywords']['reply_type'],
                         'content' => $params['IndexKeywords']['content'],
-                        'pic_path' => $url,
+                        'pic_path' => $url_db,
                         'title' => $params['IndexKeywords']['title'],
                         'summary' => $params['IndexKeywords']['summary'],
                         'url' => $params['IndexKeywords']['content'],
@@ -130,6 +131,7 @@ class AutoreplyController extends Controller
                     'keyword' => $params['IndexKeywords']['keyword'],
                     'reply_type' => $params['IndexKeywords']['reply_type'],
                     'content' => $params['IndexKeywords']['content'],
+                    'summary' => $params['IndexKeywords']['summary'],
                     'is_delete' => 0,
                 ]);
             }
@@ -170,6 +172,7 @@ class AutoreplyController extends Controller
                     //文件绝对地址
                     $url = Yii::$app->basePath .'/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $model->imageFiles->saveAs($url);
+                    $url_db = 'http://samlovesammy/library/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $type = 'image';//图片（image）、语音（voice）、视频（video）和缩略图（thumb）
                     $upload = \LaneWeChat\Core\Media::addmaterial($url,$type);
                     if(!empty($upload['url'])){
@@ -180,7 +183,7 @@ class AutoreplyController extends Controller
                         'keyword' => $params['IndexKeywords']['keyword'],
                         'reply_type' => $params['IndexKeywords']['reply_type'],
                         'content' => $params['IndexKeywords']['content'],
-                        'pic_path' => $url,
+                        'pic_path' => $url_db,
                         'url' => $params['IndexKeywords']['content'],
                         'title' => $params['IndexKeywords']['title'],
                         'summary' => $params['IndexKeywords']['summary'],
@@ -194,6 +197,7 @@ class AutoreplyController extends Controller
                     'keyword' => $params['IndexKeywords']['keyword'],
                     'reply_type' => $params['IndexKeywords']['reply_type'],
                     'content' => $params['IndexKeywords']['content'],
+                    'summary' => $params['IndexKeywords']['summary'],
                     'is_delete' => 0,
                 ]);
 //                var_dump(33);exit;

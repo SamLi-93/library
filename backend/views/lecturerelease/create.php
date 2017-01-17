@@ -12,10 +12,16 @@ $this->title = '添加讲座';
 $this->params['breadcrumbs'][] = ['label' => 'Menus', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<script type="text/javascript" src="<?php echo Yii::$app ->request -> baseUrl?>/ckeditor/ckeditor.js"></script>
+<style type="text/css">
+    #cke_lecture-content{
+        width: 600px;
+    }
+</style>
 <div class="center subject_name">
     <span>添加讲座</span>
 </div>
-<div class="col-xs-12">
+<div class="col-xs-12" style="padding-top: 10px;">
 
     <?php $form = ActiveForm::begin([
         'action' => ['create'],
@@ -39,7 +45,33 @@ $this->params['breadcrumbs'][] = $this->title;
             'format' => 'yyyy-mm-dd hh:ii',
         ]
     ]); ?>
-    <?= $form->field($model, 'address')->textInput(['maxlength' => true,'placeholder' =>'讲座地点']) ?>
+    <?= $form->field($model, 'address')->textInput(['maxlength' => true,'placeholder' =>'讲座地址']) ?>
+    <?= $form->field($model, 'brand_name')->textInput(['maxlength' => true,'placeholder' =>'讲座名字']) ?>
+    <?= $form->field($model, 'logo_url')->fileInput(['placeholder' =>'缩略图']) ?>
+    <?= $form->field($model, 'notice')->textInput(['maxlength' => true,'placeholder' =>'卡券使用提醒']) ?>
+    <?= $form->field($model, 'service_phone')->textInput(['maxlength' => true,'placeholder' =>'联系电话']) ?>
+    <?= $form->field($model, 'description')->textInput(['maxlength' => true,'placeholder' =>'卡券使用说明']) ?>
+    <?= $form->field($model, 'begin_timestamp')->widget(DateTimePicker::classname(), [
+        'options' => ['placeholder' => '起用时间'],
+        'pluginOptions' => [
+            'autoclose' => true,
+            'todayHighlight' => true,
+            'format' => 'yyyy-mm-dd hh:ii',
+        ]
+    ]); ?>
+    <?= $form->field($model, 'end_timestamp')->widget(DateTimePicker::classname(), [
+        'options' => ['placeholder' => '结束时间'],
+        'pluginOptions' => [
+            'autoclose' => true,
+            'todayHighlight' => true,
+            'format' => 'yyyy-mm-dd hh:ii',
+        ]
+    ]); ?>
+    <?= $form->field($model, 'quantity')->textInput(['maxlength' => true,'placeholder' =>'卡券库存数量']) ?>
+    <?= $form->field($model, 'custom_url_name')->textInput(['maxlength' => true,'placeholder' =>'自定义跳转外链的入口名字']) ?>
+    <?= $form->field($model, 'custom_url')->textInput(['maxlength' => true,'placeholder' =>'自定义跳转URL']) ?>
+    <?= $form->field($model, 'custom_url_sub_title')->textInput(['maxlength' => true,'placeholder' =>'显示在入口右侧的提示语']) ?>
+
     <div class="form-group-btn">
         <?= Html::submitButton('添加', ['class' => 'btn btn-primary', 'id' => 'submit-btn']) ?>
         <?= Html::a("返回", ['index'], ["class" => "btn btn-primary back-btn"]) ?>
@@ -85,5 +117,5 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         });
     });
-
+CKEDITOR.replace('lecture-content', {extraPlugins : 'autogrow',removePlugins : 'resize'});
 </script>

@@ -36,9 +36,9 @@ class Source extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['author', 'content_source_url'], 'required'],
-            [['digest', 'show_cover_pic', 'time', 'isdeleted', 'status'], 'integer'],
-            [['content'], 'string'],
+            [['author','title','thumb_media_id'], 'required'],
+            [['show_cover_pic', 'time', 'isdeleted', 'status'], 'integer'],
+            [['content','digest'], 'string'],
             [['title', 'thumb_media_id', 'author', 'content_source_url', 'file'], 'string', 'max' => 255],
         ];
     }
@@ -53,7 +53,7 @@ class Source extends \yii\db\ActiveRecord
             'title' => '标题',
             'thumb_media_id' => '图片素材',
             'author' => '作者',
-            'digest' => '消息描述',
+            'digest' => '单图文消息描述',
             'show_cover_pic' => '内容展示缩略图',
             'content' => '内容',
             'content_source_url' => '原文链接',
