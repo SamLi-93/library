@@ -100,9 +100,9 @@ class AutoreplyController extends Controller
             if (!empty($model->imageFiles)){
                 if ($model->imageFiles && $model->validate()) {
                     //文件绝对地址
-                    $url = Yii::$app->basePath .'/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
+                    $url = Yii::$app->basePath .'/web/upload_files/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $model->imageFiles->saveAs($url);
-                    $url_db = 'http://samlovesammy/library/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
+                    $url_db = 'http://samlovesammy.xyz/library/backend/web/upload_files/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $type = 'image';//图片（image）、语音（voice）、视频（video）和缩略图（thumb）
                     $upload = \LaneWeChat\Core\Media::addmaterial($url,$type);
                     //$media_id = $upload['media_id'];
@@ -170,9 +170,9 @@ class AutoreplyController extends Controller
             if (!empty($model->imageFiles)){
                 if ($model->imageFiles && $model->validate()) {
                     //文件绝对地址
-                    $url = Yii::$app->basePath .'/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
+                    $url = Yii::$app->basePath .'/web/upload_files/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $model->imageFiles->saveAs($url);
-                    $url_db = 'http://samlovesammy/library/uploads/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
+                    $url_db = 'http://samlovesammy.xyz/library/backend/web/upload_files/' . $model->imageFiles->baseName.'-'.time(). '.' . $model->imageFiles->extension;
                     $type = 'image';//图片（image）、语音（voice）、视频（video）和缩略图（thumb）
                     $upload = \LaneWeChat\Core\Media::addmaterial($url,$type);
                     if(!empty($upload['url'])){

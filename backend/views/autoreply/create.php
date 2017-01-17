@@ -77,7 +77,7 @@ var editor;
         $(".field-indexkeywords-imagefiles").css("display", "none");
         $(".field-indexkeywords-url").css("display", "none");
         $(".field-indexkeywords-title").css("display", "none");
-        $(".field-indexkeywords-summary").css("display", "none");
+//        $(".field-indexkeywords-summary").css("display", "none");
         $("#indexkeywords-reply_type").change(function () {
             var ss = $(this).children('option:selected').val();
             if(ss== 1) {
@@ -93,7 +93,7 @@ var editor;
                 $(".field-indexkeywords-imagefiles").css("display", "block");
                 $(".field-indexkeywords-url").css("display", "none");
                 $(".field-indexkeywords-title").css("display", "none");
-                $(".field-indexkeywords-summary").css("display", "none");
+//                $(".field-indexkeywords-summary").css("display", "none");
             } else if (ss == 3) {
                 editor = CKEDITOR.replace( 'indexkeywords-content', {extraPlugins : 'autogrow',removePlugins : 'resize'});
                 $(".field-indexkeywords-title").css("display", "block");

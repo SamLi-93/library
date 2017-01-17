@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true,'placeholder' =>'标题']) ?>
 
     <div class="image_div" >
-        <div class="fleft"><?= Html::a($model['imageFiles'], '#', ['title' => '图片']);?></div>
+        <div class="fleft"><?= Html::a($model['imageFiles'], $model['imageFiles'], ['title' => '图片']);?></div>
     </div>
 
     <?= $form->field($model, 'imageFiles')->fileInput(['multiple' => false, 'accept' => 'image/*']) ?>
@@ -86,78 +86,36 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         });
     });
+
+    var editor;
     $(function () {
-//        $(".field-indexkeywords-imagefiles").css("visibility", "hidden");
-        $(".field-indexkeywords-url").css("visibility", "hidden");
-        $(".field-indexkeywords-title").css("visibility", "hidden");
-        var tt = $("#indexkeywords-reply_type").val();
-        if(tt == 1) {
-            $(".field-indexkeywords-imagefiles").css("visibility", "hidden");
-            $(".field-indexkeywords-url").css("visibility", "hidden");
-            $(".field-indexkeywords-title").css("visibility", "hidden");
-            $(".field-indexkeywords-summary").css("visibility", "hidden");
-            $(".image_div").css("visibility", "hidden");
-        } else if(tt == 2 ) {
-            $(".field-indexkeywords-imagefiles").css("visibility", "visible");
-            $(".field-indexkeywords-url").css("visibility", "hidden");
-            $(".image_div").css("visibility", "visible");
-            $(".field-indexkeywords-title").css("visibility", "hidden");
-            $(".field-indexkeywords-summary").css("visibility", "hidden");
-        } else if(tt == 3 ) {
-            $(".field-indexkeywords-imagefiles").css("visibility", "visible");
-            $(".field-indexkeywords-url").css("visibility", "visible");
-            $(".image_div").css("visibility", "visible");
-            $(".field-indexkeywords-title").css("visibility", "visible");
-            $(".field-indexkeywords-summary").css("visibility", "visible");
-        }
+        $(".field-indexkeywords-imagefiles").css("display", "none");
+        $(".field-indexkeywords-url").css("display", "none");
+        $(".field-indexkeywords-title").css("display", "none");
+//        $(".field-indexkeywords-summary").css("display", "none");
         $("#indexkeywords-reply_type").change(function () {
             var ss = $(this).children('option:selected').val();
             if(ss== 1) {
-                $(".field-indexkeywords-imagefiles").css("visibility", "hidden");
-                $(".field-indexkeywords-url").css("visibility", "hidden");
-                $(".image_div").css("visibility", "hidden");
-
+                if(editor)
+                    editor.destroy( true );
+                editor = "";
+                $(".field-indexkeywords-imagefiles").css("display", "none");
+                $(".field-indexkeywords-url").css("display", "none");
             } else if(ss == 2) {
-                $(".field-indexkeywords-imagefiles").css("visibility", "visible");
-                $(".field-indexkeywords-url").css("visibility", "hidden");
-                $(".field-indexkeywords-title").css("visibility", "hidden");
+                if(editor)
+                    editor.destroy( true );
+                editor = "";
+                $(".field-indexkeywords-imagefiles").css("display", "block");
+                $(".field-indexkeywords-url").css("display", "none");
+                $(".field-indexkeywords-title").css("display", "none");
+//                $(".field-indexkeywords-summary").css("display", "none");
             } else if (ss == 3) {
-                $(".field-indexkeywords-title").css("visibility", "visible");
-                $(".field-indexkeywords-imagefiles").css("visibility", "visible");
-                $(".field-indexkeywords-url").css("visibility", "visible");
+                editor = CKEDITOR.replace( 'indexkeywords-content', {extraPlugins : 'autogrow',removePlugins : 'resize'});
+                $(".field-indexkeywords-title").css("display", "block");
+                $(".field-indexkeywords-imagefiles").css("display", "block");
+                $(".field-indexkeywords-url").css("display", "block");
+                $(".field-indexkeywords-summary").css("display", "block");
             }
         })
     })
-
-    CKEDITOR.replace( 'indexkeywords-content',
-        {
-
-            // Define font sizes in percent values.
-            fontSize_sizes : "30/30%;50/50%;100/100%;120/120%;150/150%;200/200%;300/300%",
-            toolbar :
-                [
-                    ['Source', '-', 'Save','NewPage','-','Undo','Redo'],
-                    ['Find','Replace','-','SelectAll','RemoveFormat'],
-                    ['Link', 'Unlink', 'Image', 'Smiley','SpecialChar'],
-                    '/',
-                    ['Bold', 'Italic','Underline'],
-                    ['FontSize'],
-                    ['TextColor'],
-                    ['NumberedList','BulletedList','-','Blockquote'],
-                    ['Maximize']
-                ],
-            // Strip CKEditor smileys to those commonly used in BBCode.
-            smiley_images :
-                [
-                    'regular_smile.gif','sad_smile.gif','wink_smile.gif','teeth_smile.gif','tounge_smile.gif',
-                    'embaressed_smile.gif','omg_smile.gif','whatchutalkingabout_smile.gif','angel_smile.gif','shades_smile.gif',
-                    'cry_smile.gif','kiss.gif'
-                ],
-            smiley_descriptions :
-                [
-                    'smiley', 'sad', 'wink', 'laugh', 'cheeky', 'blush', 'surprise',
-                    'indecision', 'angel', 'cool', 'crying', 'kiss'
-                ]
-        } );
-
 </script>

@@ -24,25 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LecturereleaseController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/controllers/LecturereleaseController.php">
+      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/views/autoreply/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4224">
-              <caret line="188" column="45" selection-start-line="188" selection-start-column="45" selection-end-line="188" selection-end-column="45" />
-              <folding>
-                <marker date="1484634489609" expanded="true" signature="1206:1254" ph="select id,ti... lecture" />
-                <marker date="1484634489609" expanded="true" signature="1206:1311" ph="select id,ti... lecture" />
-                <marker date="1484634489609" expanded="true" signature="1364:1393" ph="SELECT COUNT... lecture" />
-              </folding>
+            <state relative-caret-position="516">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lecture.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/models/Lecture.php">
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/views/autoreply/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="876">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,23 +47,13 @@
       <file leaf-file-name="AutoreplyController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/controllers/AutoreplyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-891">
-              <caret line="132" column="69" selection-start-line="132" selection-start-column="69" selection-end-line="132" selection-end-column="69" />
+            <state relative-caret-position="142">
+              <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
               <folding>
                 <element signature="e#118#147#0#PHP" expanded="true" />
-                <marker date="1484631664537" expanded="true" signature="1575:1639" ph="select * fro... index_keywords" />
-                <marker date="1484631664537" expanded="true" signature="1692:1728" ph="SELECT COUNT... index_keywords" />
+                <marker date="1484636035227" expanded="true" signature="1575:1639" ph="select * fro... index_keywords" />
+                <marker date="1484636035227" expanded="true" signature="1692:1728" ph="SELECT COUNT... index_keywords" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CardController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/controllers/CardController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -131,13 +117,13 @@
         <option value="$PROJECT_DIR$/backend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/backend/libs/LaneWeChat/lanewechat.php" />
         <option value="$PROJECT_DIR$/backend/views/lectureorder/_search.php" />
-        <option value="$PROJECT_DIR$/backend/views/autoreply/edit.php" />
-        <option value="$PROJECT_DIR$/backend/views/autoreply/create.php" />
-        <option value="$PROJECT_DIR$/backend/controllers/AutoreplyController.php" />
         <option value="$PROJECT_DIR$/backend/models/Lecture.php" />
         <option value="$PROJECT_DIR$/backend/views/lecturerelease/edit.php" />
         <option value="$PROJECT_DIR$/backend/views/lecturerelease/create.php" />
         <option value="$PROJECT_DIR$/backend/controllers/LecturereleaseController.php" />
+        <option value="$PROJECT_DIR$/backend/views/autoreply/create.php" />
+        <option value="$PROJECT_DIR$/backend/views/autoreply/edit.php" />
+        <option value="$PROJECT_DIR$/backend/controllers/AutoreplyController.php" />
       </list>
     </option>
   </component>
@@ -276,6 +262,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lecturerelease" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="autoreply" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -495,15 +503,15 @@
       <workItem from="1484182991960" duration="12158000" />
       <workItem from="1484271003227" duration="2781000" />
       <workItem from="1484544734480" duration="642000" />
-      <workItem from="1484614403257" duration="9334000" />
+      <workItem from="1484614403257" duration="10550000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="783359000" />
+    <option name="totallyTimeSpent" value="784575000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1873" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15616585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -782,22 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/autoreply/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/views/autoreply/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1560">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/LectureorderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -905,14 +897,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/autoreply/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="876">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/views/autoreply/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/controllers/AutoreplyController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-891">
-          <caret line="132" column="69" selection-start-line="132" selection-start-column="69" selection-end-line="132" selection-end-column="69" />
+        <state relative-caret-position="142">
+          <caret line="175" column="78" selection-start-line="175" selection-start-column="78" selection-end-line="175" selection-end-column="78" />
           <folding>
             <element signature="e#118#147#0#PHP" expanded="true" />
-            <marker date="1484631664537" expanded="true" signature="1575:1639" ph="select * fro... index_keywords" />
-            <marker date="1484631664537" expanded="true" signature="1692:1728" ph="SELECT COUNT... index_keywords" />
+            <marker date="1484636035227" expanded="true" signature="1575:1639" ph="select * fro... index_keywords" />
+            <marker date="1484636035227" expanded="true" signature="1692:1728" ph="SELECT COUNT... index_keywords" />
           </folding>
         </state>
       </provider>
