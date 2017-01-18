@@ -75,16 +75,28 @@ $this->params['breadcrumbs'][] = $this->title;
                 return $model['summary'];
             }
         ],
-
+     
         [
+            'class' => 'yii\grid\ActionColumn',
             'header' => '图片地址',
-            'headerOptions' => ['width' => '500px'],
-            'attribute' => 'pic_path',
-            'value' => function ($model) {
-                return $model['pic_path'];
-            }
+            //'attribute' => 'pic_path',
+            'template' => '{link}',
+            'buttons' => [
+                'link' => function ($url, $model, $key) {
+                    $options = [
+                        'title' => '查看',
+                        'id' => 'edit-btn',
+                        'target' => '_blank'
+                    ];
+                    $url = $model['pic_path'];
+                    $text = "";
+                    if(!empty($model['pic_path'])){
+                        $text = mb_substr($model['pic_path'] , 0 , 25).'...'; 
+                    }
+                    return Html::a($text, $url, $options);
+                }
+            ]
         ],
-
         [
             'header' => '链接地址',
             'attribute' => 'url',

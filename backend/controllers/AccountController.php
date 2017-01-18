@@ -9,24 +9,14 @@
 namespace backend\controllers;
 
 use app\models\SmsAdmin;
+use app\models\SmsAdminNoAuth;
 use Yii;
-use app\models\Teacher;
-use app\models\VideoMaking;
-use app\models\Project;
-use app\models\ProjectSearch;
 use yii\data\SqlDataProvider;
 use yii\web\Controller;
 use yii\grid\GridView;
 
 class AccountController extends Controller
 {
-    private $pro_projectname = [];
-    private $pro_school = [];
-    private $pro_teacher = [];
-    private $pro_over = [];
-    private $course_list = [];
-    private $person_list = [];
-    private $teacher_list = [];
 
     public function beforeAction($action)
     {
@@ -43,53 +33,20 @@ class AccountController extends Controller
 
     public function actionIndex()
     {
-        $this->layout = 'main';
-        $searchModel = new ProjectSearch();
-        $query = Yii::$app->request->queryParams;
-        $sql_parms = '';
-        if (!empty($query['ProjectSearch'])) {
-            $query_parms = array_filter($query['ProjectSearch']);
-            $sql_parms = 'where true';
+        $orgid = Yii::$app->user->identity->orgid;
+        $name =Yii::$app->user->identity->name;
+        if ($orgid == 2) {
+            $sql = "select id,username,password,orgid from sms_admin ";
+            $command = Yii::$app->db->createCommand('SELECT COUNT(*) FROM sms_admin ');
+            $count = $command->queryScalar();
+        } else {
+            $sql = "select id,username,password,orgid from sms_admin where username= '".$name . "'";
+            $command = Yii::$app->db->createCommand("SELECT COUNT(*) FROM sms_admin WHERE username= '" .$name . "'" );
+            $count = $command->queryScalar();
         }
-
-        if (isset($query_parms['projectname'])) {
-            $sql_parms .= " and id = '" . $query_parms['projectname'] . "'";
-        }
-
-        if (isset($query_parms['school'])) {
-            $sql_parms .= " and school = '" . $query_parms['school'] . "'";
-        }
-
-        if (isset($query_parms['teacher'])) {
-            $sql_parms .= " and teacher = '" . $query_parms['teacher'] . "'";
-        }
-
-        if (isset($query_parms['is_neibu'])) {
-            if ($query_parms['is_neibu'] == 2) {
-                $query_parms['is_neibu'] = 0;
-            }
-            $sql_parms .= " and is_neibu = '" . $query_parms['is_neibu'] . "'";
-        }
-
-        if (isset($query_parms['over'])) {
-            if ($query_parms['over'] == 2) {
-                $query_parms['over'] = 0;
-            }
-            $sql_parms .= " and over = '" . $query_parms['over'] . "'";
-        }
-
-        $sql = "select * from project " . $sql_parms . " order by id desc";
-
-        $command = Yii::$app->db->createCommand('SELECT COUNT(*) FROM project ' . $sql_parms);
-        $command->bindParam(':projectname', $projectname);
-        $command->bindParam(':school', $school);
-        $command->bindParam(':teacher', $teacher);
-        $command->bindParam(':over', $over);
-        $count = $command->queryScalar();
 
         $dataProvider = new SqlDataProvider([
             'sql' => $sql,
-//            'params' => [':status' => 1],
             'totalCount' => $count,
             'pagination' => [
                 'pageSize' => 15,
@@ -106,36 +63,22 @@ class AccountController extends Controller
         ]);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'pro_projectname' => $this->pro_projectname,
-            'pro_school' => $this->pro_school,
-            'pro_teacher' => $this->teacher_list,
-            'pro_over' => $this->pro_over,
-            'query' => $query,
         ]);
     }
 
     public function actionCreate()
     {
-        $this->layout = 'main';
-        $model = new Project();
-        $model->uploadname = Yii::$app->user->identity->name;
-
+        $model = new SmsAdminNoAuth();
         if (!empty(Yii::$app->request->post())) {
             $params = Yii::$app->request->post();
+            $model['passwordRepeat'] = $params['SmsAdminNoAuth']['password'];
             $model->setAttributes([
-                'projectname' => $params['Project']['projectname'],
-                'school' => $params['Project']['school'],
-                'over' => $params['Project']['over'],
-                'free' => $params['Project']['free'],
-                'teacher' => $params['Project']['teacher'],
-                'time' => strtotime($params['Project']['time']),
-                'endtime' => strtotime($params['Project']['endtime']),
-                'original_path' => $params['Project']['original_path'],
-                'making_path' => $params['Project']['making_path'],
-                'uploadname' => $params['Project']['uploadname'],
-                'is_neibu' => $params['Project']['is_neibu'],
+                'username' => $params['SmsAdminNoAuth']['username'],
+                'name' => $params['SmsAdminNoAuth']['username'],
+                'password' => md5($params['SmsAdminNoAuth']['password']),
+                'orgid' => intval($params['SmsAdminNoAuth']['orgid']),
+                'passwordRepeat' => md5($params['SmsAdminNoAuth']['passwordRepeat']),
             ]);
         }
 
@@ -145,11 +88,6 @@ class AccountController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
-                'pro_projectname' => $this->pro_projectname,
-                'pro_school' => $this->pro_school,
-                'pro_teacher' => $this->teacher_list,
-                'pro_over' => $this->pro_over,
-                'uploadname_list' => $this->person_list,
             ]);
         }
     }
@@ -157,25 +95,19 @@ class AccountController extends Controller
     public function actionEdit()
     {
         $id = Yii::$app->request->get('id');
-        $model = Project::findOne($id);
-        $model['time'] = date('Y-m-d',$model['time']);
-        $model['endtime'] = date('Y-m-d',$model['endtime']);
+        $model = SmsAdminNoAuth::findOne($id);
+        $model['passwordRepeat'] = $model['password'];
 
         if (!empty(Yii::$app->request->post())) {
+
             $params = Yii::$app->request->post();
-            $model->setAttributes([
-                'projectname' => $params['Project']['projectname'],
-                'school' => $params['Project']['school'],
-                'over' => $params['Project']['over'],
-                'free' => $params['Project']['free'],
-                'teacher' => $params['Project']['teacher'],
-                'time' => strtotime($params['Project']['time']),
-                'endtime' => strtotime($params['Project']['endtime']),
-                'original_path' => $params['Project']['original_path'],
-                'making_path' => $params['Project']['making_path'],
-                'uploadname' => $params['Project']['uploadname'],
-                'is_neibu' => $params['Project']['is_neibu'],
-            ]);
+            $model['passwordRepeat'] = $params['SmsAdminNoAuth']['password'];
+            $orgid = empty($params['SmsAdminNoAuth']['orgid']) ? 0 : $params['SmsAdminNoAuth']['orgid'];
+            $model->username = $params['SmsAdminNoAuth']['username'];
+            $model->name = $params['SmsAdminNoAuth']['username'];
+            $model->password = md5($params['SmsAdminNoAuth']['password']);
+            $model->orgid = intval($orgid);
+            $model->passwordRepeat = md5($params['SmsAdminNoAuth']['passwordRepeat']);
         }
 
         if (!empty(Yii::$app->request->post()) && $model->save()) {
@@ -184,7 +116,6 @@ class AccountController extends Controller
         } else {
             return $this->render('edit', [
                 'model' => $model,
-                'person_list' => $this->person_list,
             ]);
         }
     }
@@ -193,40 +124,9 @@ class AccountController extends Controller
     {
         $query = Yii::$app->request->queryParams;
         $id = $query['id'];
-        $data = Project::findOne($id);
+        $data = SmsAdminNoAuth::findOne($id);
         $data->delete();
-
         Yii::$app->cache->delete('index');
         return $this->redirect(['index']);
-    }
-
-    public function actionChangeover()
-    {
-        $query = Yii::$app->request->post();
-        $id = $query['id'];
-        $value = $query['value'];
-        $model = Project::findOne($id);
-        $model->over = $value;
-        if ($model->save()) {
-            Yii::$app->cache->delete('index');
-            return $this->redirect(['index']);
-        } else {
-            return \Yii::$app->getSession()->setFlash('error', '修改失败');
-        }
-    }
-
-    public function actionChangefree()
-    {
-        $query = Yii::$app->request->post();
-        $id = $query['id'];
-        $value = $query['value'];
-        $model = Project::findOne($id);
-        $model->free = $value;
-        if ($model->save()) {
-            Yii::$app->cache->delete('index');
-            return $this->redirect(['index']);
-        } else {
-            return \Yii::$app->getSession()->setFlash('error', '修改失败');
-        }
     }
 }

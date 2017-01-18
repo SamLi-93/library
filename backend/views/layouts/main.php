@@ -44,13 +44,13 @@ AppAsset::register($this);
         <div class="sims_left sidebar" id="sidebar">
             <dt class="sims_list_on">后台管理</dt>
             <dd class="left_cons">
-                <a href="<?= \yii\helpers\Url::to(['project/index']) ?>" class="<?= Yii::$app->controller->id == 'project'? 'left_con_on' : 'left_con'; ?>">项目管理</a>
-                <a href="<?= \yii\helpers\Url::to(['videomaking/index']) ?>" class="<?= Yii::$app->controller->id == 'videomaking'? 'left_con_on' : 'left_con'; ?>" >课程管理</a>
+                <!-- <a href="<?= \yii\helpers\Url::to(['project/index']) ?>" class="<?= Yii::$app->controller->id == 'project'? 'left_con_on' : 'left_con'; ?>">项目管理</a>
+                <a href="<?= \yii\helpers\Url::to(['videomaking/index']) ?>" class="<?= Yii::$app->controller->id == 'videomaking'? 'left_con_on' : 'left_con'; ?>" >课程管理</a> -->
                 <a href="<?= \yii\helpers\Url::to(['bookborrow/index']) ?>" class="<?= Yii::$app->controller->id == 'bookborrow'? 'left_con_on' : 'left_con'; ?>">图书借阅</a>
                 <a href="<?= \yii\helpers\Url::to(['readerrecommand/index']) ?>" class="<?= Yii::$app->controller->id == 'readerrecommand'? 'left_con_on' : 'left_con'; ?>">读者推荐</a>
-                <a href="<?= \yii\helpers\Url::to(['postmaterial/index']) ?>" class="<?= Yii::$app->controller->id == 'postmaterial'? 'left_con_on' : 'left_con'; ?>" >发布素材</a>
-                <a href="<?= \yii\helpers\Url::to(['source/index']) ?>" class="<?= Yii::$app->controller->id == 'source'? 'left_con_on' : 'left_con'; ?>" >图文消息管理</a>
-                <a href="<?= \yii\helpers\Url::to(['material/index']) ?>" class="<?= Yii::$app->controller->id == 'material'? 'left_con_on' : 'left_con'; ?>" >素材管理</a>
+                <!-- <a href="<?= \yii\helpers\Url::to(['postmaterial/index']) ?>" class="<?= Yii::$app->controller->id == 'postmaterial'? 'left_con_on' : 'left_con'; ?>" >发布素材</a> -->
+                <a href="<?= \yii\helpers\Url::to(['source/index']) ?>" class="<?= Yii::$app->controller->id == 'source'? 'left_con_on' : 'left_con'; ?>" >素材管理</a>
+                <!-- <a href="<?= \yii\helpers\Url::to(['material/index']) ?>" class="<?= Yii::$app->controller->id == 'material'? 'left_con_on' : 'left_con'; ?>" >素材管理</a> -->
                 <a href="<?= \yii\helpers\Url::to(['bookorder/index']) ?>" class="<?= Yii::$app->controller->id == 'bookorder'? 'left_con_on' : 'left_con'; ?>" >图书预约</a>
                 <a href="<?= \yii\helpers\Url::to(['lectureorder/index']) ?>" class="<?= Yii::$app->controller->id == 'lectureorder'? 'left_con_on' : 'left_con'; ?>" >讲座订票</a>
                 <a href="<?= \yii\helpers\Url::to(['lecturerelease/index']) ?>" class="<?= Yii::$app->controller->id == 'lecturerelease'? 'left_con_on' : 'left_con'; ?>" >讲座发布</a>

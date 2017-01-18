@@ -13,6 +13,12 @@ $this->params['breadcrumbs'][] = ['label' => 'Project', 'url' =>  ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 // $this->params['breadcrumbs'][] = ['label' => $model->projectname, 'url' => ['view', 'id' => $model->id]];
 ?>
+<script type="text/javascript" src="<?php echo Yii::$app ->request -> baseUrl?>/ckeditor/ckeditor.js"></script>
+<style type="text/css">
+    #cke_lecture-content{
+        width: 600px;
+    }
+</style>
 <div class="center subject_name">
     <span>讲座修改</span>
 </div>
@@ -94,5 +100,5 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         });
     });
-
+CKEDITOR.replace('lecture-content', {extraPlugins : 'autogrow',removePlugins : 'resize'});
 </script>

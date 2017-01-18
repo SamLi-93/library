@@ -18,6 +18,10 @@ use yii\grid\GridView;
 use yii\data\ActiveDataProvider;
 use yii\web\UploadedFile;
 
+
+include dirname(dirname(__FILE__)).'/libs/LaneWeChat/lanewechat.php';
+include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/card.lib.php';
+include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/templatemessage.lib.php';
 class LecturereleaseController extends Controller
 {
     public function beforeAction($action)
@@ -80,9 +84,7 @@ class LecturereleaseController extends Controller
 
     public function actionCreate()
     {
-        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/lanewechat.php';
-        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/card.lib.php';
-        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/templatemessage.lib.php';
+        
         $this->layout = 'main';
         $model = new Lecture();
         if (!empty(Yii::$app->request->post())) {
@@ -155,9 +157,6 @@ class LecturereleaseController extends Controller
 
     public function actionEdit()
     {
-        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/lanewechat.php';
-        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/card.lib.php';
-        include dirname(dirname(__FILE__)).'/libs/LaneWeChat/core/templatemessage.lib.php';
         $id = Yii::$app->request->get('id');
         $model = Lecture::findOne($id);
         if(empty($model['datetime'])) { $model['datetime'] = null; }
@@ -188,8 +187,8 @@ class LecturereleaseController extends Controller
                         "description" => $params['Lecture']['description'],
                         "date_info" => array(
                             "type" => 1,
-                            "begin_timestamp" => strtotime($params['Lecture']['begin_timestamp']),
-                            "end_timestamp" => strtotime($params['Lecture']['end_timestamp']),
+                            "begin_timestamp" => time(),
+                            "end_timestamp" => strtotime($params['Lecture']['datetime']),
                         ),
                         "sku" => array(
                             "quantity" => $params['Lecture']['quantity'],
@@ -244,12 +243,20 @@ class LecturereleaseController extends Controller
 
         $query = Yii::$app->request->queryParams;
         $list =  array();
+        $error = "暂无数据";
         if(!empty($query['id'])){
             $info = \LaneWeChat\Core\Card::getcardinfo($query['id']);
-            $list = $info['list'];
+            if(!empty($info['errcode'])){
+                $error = "调用接口次数超出上限";
+            }else{
+                $list = $info['list'];
+            }
+        }else{
+            $error = "数据出错";
         }
         return $this->render('view',[
-            'list' => $list
+            'list' => $list,
+            'error' => $error
         ]);
     }
 }

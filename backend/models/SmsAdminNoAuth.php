@@ -50,7 +50,7 @@ class SmsAdminNoAuth extends \yii\db\ActiveRecord
             'id' => 'ID',
             'username' => '用户名',
             'password' => '密码',
-            'passwordRepeat' => '密码',
+            'passwordRepeat' => '密码确认',
             'name' => '用户名',
             'gender' => 'Gender',
             'orgid' => '权限',

@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+a:link {
+
+    /*line-height: 25px;*/
+    text-decoration: none;
+}
+a:hover {
+
+    /*line-height: 25px;*/
+    color: #666666;
+    text-decoration: none;
+}
+a:visited {
+
+    /*line-height: 14px;*/
+    text-decoration: none;
+}
+
+.table{
+        /* margin-top: 20px; */
+    width: 90%;
+    /* margin: 0 auto; */
+    /* padding-left: 10px; */
+    margin-left: 20px;
+}
+.pagination{
+    float: right;
+    margin-right: 100px;
+}
+
+.subject_name{
+    height: 47px;
+    width: 90%;
+    margin: 0px auto;
+    margin-left: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+.subject_name span {
+    line-height: 48px;
+    color: #999999;
+}
+
+/*Sam  搜索框*/
+.widget-box {
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0 auto;
+    width: 70%;
+}
+.widget-header-small {
+    min-height: 31px;
+    padding-left: 10px;
+}
+.widget-body {
+    /*border: 1px solid #CCC;*/
+    border-top: 0;
+    background-color: #FFF;
+}
+.widget-main {
+    padding: 12px;
+}
+.widget-main>form {
+    margin-bottom: 0;
+}
+.widget-main>form {
+    margin-bottom: 0;
+}
+.grid-view{
+<<<<<<< .mine
+    margin-top: 5%;
+||||||| .r151
+    margin-top: 100px;
+=======
+   /* margin-top: 100px;*/
+>>>>>>> .r160
+}
+.form-group{
+    margin-left: 3px;
+}
+.col-xs-12{
+    width: 70%;
+    margin-left: 20px;
+}
+.form-group-btn{
+    margin-top: 20px;
+    margin-left: 110px;
+}
+.back-btn{
+    margin-left: 40px;
+}
+/*td{*/
+    /*text-align: center;*/
+/*}*/
+.fleft{
+    float: left;
+}
+.mr-l-10{
+    margin-left: 10px;
+}
+.width-200{
+    width: 300px;
+}
+.field-courseware-time0{
+    float: left;
+    padding-left:5%;
+}
+.field-courseware-time1{
+    float: left;
+}
+.time-input{
+    width:50px;
+}
+.field-courseware-time2 .control-label{
+    width: 0;
+}
+.image_div{
+    margin-left: 8%;
+    margin-bottom: 1%;
+}
+.image_delete{
+    margin-bottom: 1%;
+}
+.sam-btn{
+    padding: 0;
+    margin-left: 2%;
+}
+.test{
+    width: 50%;
+    height:5%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+#my_form{
+    margin-top: 10px;
+}
+.time_manage{
+    height: 40px;
+}
+.add_time{
+    padding-left: 8%;
+    padding-top: 10px;
+}
+.delete_time{
+    padding-top: 10px;
+    padding-left: 4%;
+}
+/*表格*/
+.list_table {
+    margin: 0 auto;
+    margin-top: 100px;
+    /*border-radius: 10px;*/
+    /*border: 1px solid #167F92;*/
+}
+.list_table>thead>tr{
+    height: 35px;
+}
+.list_table>thead>tr>th {
+    border-bottom-width: 2px;
+    padding: 8px;
+    /*width: 100px;*/
+}
+.list_table>tbody>tr>td {
+    height: 35px;
+    padding: 8px;
+}
+.list_table>thead>tr>th:first-child {
+    width: 70px;
+}
+.sims_left{
+    width: 12%;
+}
+.main-content{
+    float: left;
+    width: 88%;
+}
+.widget-box{
+    width: 100%;
+}
+@media screen and (max-width: 1800px) {
+    .sims_left{
+        width: 16%;
+    }
+    .main-content{
+        width: 84%;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .sims_left{
+        width: 18%;
+    }
+    .main-content{
+        width: 82%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .sims_left{
+        width: 20%;
+    }
+    .main-content{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .sims_left{
+        width: 22%;
+    }
+    .main-content{
+        width: 78%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .sims_left{
+        width: 24%;
+    }
+    .main-content{
+        width: 76%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .sims_left{
+        width: 26%;
+    }
+    .main-content{
+        width: 74%;
+    }
+}
+
