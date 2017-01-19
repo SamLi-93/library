@@ -19,7 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php echo $this->render('_search', [
     'model' => $searchModel,
-//    'query' => $query
+    'lecturelist' => $lecturelist,
+    'query' => $query
 ]); ?>
 
 <?= GridView::widget([
@@ -28,10 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
     'columns' => [
         ['class' => 'yii\grid\SerialColumn', 'header' => '序号'],
         [
-            'header' => '讲座id',
-            'attribute' => 'lecture_id',
+            'header' => '讲座',
+            'attribute' => 'title',
             'value' => function ($model) {
-                return $model['lecture_id'];
+                return $model['title'];
             }
         ],
 

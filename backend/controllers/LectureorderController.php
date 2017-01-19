@@ -14,7 +14,7 @@ use app\models\SmsAdmin;
 use Yii;
 use app\models\Teacher;
 use app\models\VideoMaking;
-use app\models\Project;
+use app\models\Lecture;
 use app\models\ProjectSearch;
 use yii\data\SqlDataProvider;
 use yii\web\Controller;
@@ -22,6 +22,8 @@ use yii\grid\GridView;
 
 class LectureorderController extends Controller
 {
+    private $lecturelist = [];
+
     public function beforeAction($action)
     {
         if (empty(Yii::$app->user->identity)) {
@@ -31,28 +33,33 @@ class LectureorderController extends Controller
     }
 
     public function init()
-    {
+    {       
         parent::init();
+        $lecture = new Lecture();
+        $this->lecturelist = $lecture->getlectureName();
+
     }
 
     public function actionIndex()
     {
         $this->layout = 'main';
-        $model = new LectureBook();
+        $model = new Lecture();
+        //$searchModel
         $query = Yii::$app->request->queryParams;
+        var_dump($query);
         $sql_parms = '';
-        if (!empty($query['LectureBook'])) {
-            $query_parms = array_filter($query['LectureBook']);
-            $sql_parms = 'where true';
+        if (!empty($query['Lecture'])) {
+            $query_parms = array_filter($query['Lecture']);
+            $sql_parms = ' where true';
         }
 
-        if (isset($query_parms['lecture_id'])) {
-            $sql_parms .= " and id = '" . $query_parms['lecture_id'] . "'";
+        if (isset($query_parms['title'])) {
+            $sql_parms .= " and b.id = '" . $query_parms['title'] . "'";
         }
 
-        $sql = "select id,lecture_id,readercode,datetime from lecture_book " . $sql_parms . " order by id desc";
+        $sql = "select a.id,a.lecture_id,a.readercode,a.datetime,b.title from lecture_book as a left join lecture as b  on a.lecture_id = b.id" . $sql_parms . " order by a.id desc";
 
-        $command = Yii::$app->db->createCommand('SELECT COUNT(id) FROM lecture_book ' . $sql_parms);
+        $command = Yii::$app->db->createCommand('select count(a.id) from lecture_book as a left join lecture as b  on a.lecture_id = b.id ' . $sql_parms);
         $count = $command->queryScalar();
 
         $dataProvider = new SqlDataProvider([
@@ -75,6 +82,8 @@ class LectureorderController extends Controller
         return $this->render('index', [
             'searchModel' => $model,
             'dataProvider' => $dataProvider,
+            'lecturelist' => $this->lecturelist,
+            'query' => $query
         ]);
     }
 

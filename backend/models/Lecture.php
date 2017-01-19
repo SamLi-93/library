@@ -78,4 +78,17 @@ class Lecture extends \yii\db\ActiveRecord
 
         ];
     }
+
+
+    public function getlectureName()
+    {
+        $list = self::findBySql('select id, title from lecture')->all();
+        $pro_list = [];
+        foreach ($list as $k => $v) {
+//            array_push($pro_list, $v['projectname']);
+            $key = $v['title'];
+            $pro_list[$v['id']] = $v['title'] ;
+        }
+        return $pro_list;
+    }
 }
