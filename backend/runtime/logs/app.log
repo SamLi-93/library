@@ -42767,3 +42767,73 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1484790464.937
     'REQUEST_TIME' => 1484790464
 ]
+2017-01-19 09:51:49 [127.0.0.1][][1m76hffkvou61uaa6u0he57rj3][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: test' in D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\SettingController.php:29
+Stack trace:
+#0 D:\phpstudy\WWW\bookwap\trunk\library\backend\controllers\SettingController.php(29): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'D:\\phpstudy\\WWW...', 29, Array)
+#1 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Controller.php(152): backend\controllers\SettingController->beforeAction(Object(yii\base\InlineAction))
+#2 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#3 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('setting/index', Array)
+#4 D:\phpstudy\WWW\bookwap\trunk\library\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 D:\phpstudy\WWW\bookwap\trunk\library\backend\web\index.php(21): yii\base\Application->run()
+#6 {main}
+2017-01-19 09:51:48 [127.0.0.1][][1m76hffkvou61uaa6u0he57rj3][info][application] $_COOKIE = [
+    'pgv_pvid' => '4182895908'
+    '1e604dc1900aed139091f17c7fce1290' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'c6e5ff69be841e506380e594c83fcafc' => '4b0a73aee3e61e2dbe62d645a72c313740e37a19a:4:{i:0;s:1:\"1\";i:1;s:5:\"admin\";i:2;i:36288000;i:3;a:0:{}}'
+    'Hm_lvt_7b1919221e89d2aa5711e4deb935debd' => '1482375231'
+    '_ga' => 'GA1.1.1065371983.1483943378'
+    '_identity' => 'e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a:2:{i:0;s:9:\"_identity\";i:1;s:18:\"[\"1\",null,2592000]\";}'
+    '_csrf-backend' => '79dbf5c60d6511afd7d4c69511bc5f0978d191ba77669708a7759a109a10fe69a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MerIuGsM0OF_FZJWZkTuiTUnGntvSKdr\";}'
+    'advanced-backend' => '1m76hffkvou61uaa6u0he57rj3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 51
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\nodejs\\;C:\\Python27\\Scripts\\;D:\\phpstudy\\MySQL\\bin\\;D:\\androidsdk\\platform-tools\\;D:\\androidsdk\\tools\\;D:\\phpstudy\\php55n;C:\\ProgramData\\ComposerSetup\\bin\\;C:\\cygwin64\\bin;C:\\Users\\Administrator\\AppData\\Roaming\\npm;C:\\Users\\Administrator\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/phpStudy/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1836'
+    'SCRIPT_NAME' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_URI' => '/bookwap/trunk/library/backend/web/setting/index'
+    'QUERY_STRING' => ''
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REDIRECT_URL' => '/bookwap/trunk/library/backend/web/setting/index'
+    'REMOTE_PORT' => '52022'
+    'SCRIPT_FILENAME' => 'D:/phpstudy/WWW/bookwap/trunk/library/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/phpstudy/WWW'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'HTTP_COOKIE' => 'pgv_pvid=4182895908; 1e604dc1900aed139091f17c7fce1290=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; c6e5ff69be841e506380e594c83fcafc=4b0a73aee3e61e2dbe62d645a72c313740e37a19a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A36288000%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D; Hm_lvt_7b1919221e89d2aa5711e4deb935debd=1482375231; _ga=GA1.1.1065371983.1483943378; _identity=e8ca06b5795e641ffedd650e1997263be2c69f4ca502305b440a8e34b40aaf26a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A18%3A%22%5B%221%22%2Cnull%2C2592000%5D%22%3B%7D; _csrf-backend=79dbf5c60d6511afd7d4c69511bc5f0978d191ba77669708a7759a109a10fe69a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MerIuGsM0OF_FZJWZkTuiTUnGntvSKdr%22%3B%7D; advanced-backend=1m76hffkvou61uaa6u0he57rj3'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_REFERER' => 'http://127.0.0.1/bookwap/trunk/library/backend/web/project/index'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => '127.0.0.1'
+    'REDIRECT_STATUS' => '200'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/bookwap/trunk/library/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1484790708.573
+    'REQUEST_TIME' => 1484790708
+]
