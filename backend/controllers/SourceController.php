@@ -116,7 +116,8 @@ class SourceController extends Controller
                 $model->file = UploadedFile::getInstance($model, 'file');
                 if ($model->file) {
                     //文件绝对地址
-                    $url = Yii::$app->basePath .'/uploads/' . $model->file->baseName .'-'.time(). '.' . $model->file->extension;
+//                    $url = Yii::$app->basePath .'/uploads/' . $model->file->baseName .'-'.time(). '.' . $model->file->extension;
+                    $url = Yii::$app->basePath .'/web/upload_files/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
                     $model->file->saveAs($url);
                     $type = 'image';//图片（image）、语音（voice）、视频（video）和缩略图（thumb）
                     $upload = \LaneWeChat\Core\Media::addmaterial($url,$type);
@@ -220,7 +221,8 @@ class SourceController extends Controller
             $model->file = UploadedFile::getInstance($model, 'file');
             if ($model->file && $model->validate()) {
                 //文件绝对地址
-                $url = Yii::$app->basePath .'/uploads/' . $model->file->baseName .'-'.time(). '.' . $model->file->extension;
+//                $url = Yii::$app->basePath .'/uploads/' . $model->file->baseName .'-'.time(). '.' . $model->file->extension;
+                $url = Yii::$app->basePath .'/web/upload_files/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
                 $model->file->saveAs($url);
                 $type = "images";//图片（image）、语音（voice）、视频（video）和缩略图（thumb）
                 $upload = \LaneWeChat\Core\Media::upload($url,$type);
@@ -280,7 +282,8 @@ class SourceController extends Controller
             $model->file = UploadedFile::getInstance($model, 'file');
             if ($model->file && $model->validate()) {
                 //文件绝对地址
-                $url = Yii::$app->basePath .'/uploads/' . $model->file->baseName .'-'.time(). '.' . $model->file->extension;
+//                $url = Yii::$app->basePath .'/uploads/' . $model->file->baseName .'-'.time(). '.' . $model->file->extension;
+                $url = Yii::$app->basePath .'/web/upload_files/' . $model->logo_url->baseName.'-'.time(). '.' . $model->logo_url->extension;
                 $model->file->saveAs($url);
                 $type = "images";//图片（image）、语音（voice）、视频（video）和缩略图（thumb）
                 $upload = \LaneWeChat\Core\Media::addmaterial($url,$type);
