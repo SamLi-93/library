@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
     <?= $form->field($model, 'title')->textInput(['maxlength' => true,'placeholder' =>'']) ?>
     <?= $form->field($model, 'author')->textInput(['maxlength' => true,'placeholder' =>'']) ?>
-    <?//= $form->field($model, 'thumb_media_id')->widget(Select2::classname(), ['data' => $list, ]); ?>
     <?= $form->field($model, 'file')->fileInput(['placeholder' =>'缩略图']) ?>
     <?= $form->field($model, 'digest')->textInput(['maxlength' => true,'placeholder' =>'']); ?>
     <?= $form->field($model, 'show_cover_pic')->widget(Select2::classname(), ['data' => ['0' => '否', '1' => '是'], ]); ?>
