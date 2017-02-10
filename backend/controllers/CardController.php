@@ -127,4 +127,26 @@ class CardController extends \yii\web\Controller
             'list' => $list
         ]);
     }
+
+    /**
+     * 图书续借提醒,发送模板消息
+     * @return [type] [description]
+     */
+    function actionRenewbook(){
+    	$data = array(
+           'con'=>array('value'=>'您好，您已成功消费。', 'color'=>'#0A0A0A'),
+           'date'=>array('value'=>'巧克力', 'color'=>'#CCCCCC'),
+           /*'keynote2'=>array('value'=>'39.8元', 'color'=>'#CCCCCC'),
+           'keynote3'=>array('value'=>'2014年9月16日', 'color'=>'#CCCCCC'),
+           'keynote3'=>array('value'=>'欢迎再次购买。', 'color'=>'#173177')*/
+        );
+        $touser = 'o33Vtv9Oewm2dckRj-AkksuwGGTM'; //接收方的OpenId。
+        $templateId = 'NtVIOn-MJoDNh8mfj6aLj65gs4B8nUcIF9dq81zl6pU';  // 模板Id。在公众平台线上模板库中选用模板获得ID
+        $url = 'http://weixin.qq.com/';  // URL
+        $topcolor = '#FF0000';  // 顶部颜色，可以为空。默认是红色
+    	$res = \LaneWeChat\Core\TemplateMessage::sendTemplateMessage($data, $touser, $templateId, $url, $topcolor='#FF0000');
+    	var_dump($res);
+    	exit();
+    }   
+    
 }

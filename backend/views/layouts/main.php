@@ -36,7 +36,7 @@ AppAsset::register($this);
     <span class="sims_top3"> 图书馆后台管理系统！ </span>
     <span class="sims_top4"></span>
     <span class="sims_top5" id="stimer"></span>
-    <span class="logout fright"><a href='../default/logout'>退出</a></span>
+    <span class="logout fright" style="background: none;"><a class=" btn btn-primary" href='../default/logout'>退出</a></span>
 </div>
 
 <div class="main-container" id="main-container">
@@ -54,6 +54,8 @@ AppAsset::register($this);
                 <a href="<?= \yii\helpers\Url::to(['bookorder/index']) ?>" class="<?= Yii::$app->controller->id == 'bookorder'? 'left_con_on' : 'left_con'; ?>" >图书预约</a>
                 <a href="<?= \yii\helpers\Url::to(['lectureorder/index']) ?>" class="<?= Yii::$app->controller->id == 'lectureorder'? 'left_con_on' : 'left_con'; ?>" >讲座订票</a>
                 <a href="<?= \yii\helpers\Url::to(['lecturerelease/index']) ?>" class="<?= Yii::$app->controller->id == 'lecturerelease'? 'left_con_on' : 'left_con'; ?>" >讲座发布</a>
+                <a href="<?= \yii\helpers\Url::to(['book/index']) ?>" class="<?= Yii::$app->controller->id == 'book'? 'left_con_on' : 'left_con'; ?>" >新书管理</a>
+                <a href="<?= \yii\helpers\Url::to(['notice/index']) ?>" class="<?= Yii::$app->controller->id == 'notice'? 'left_con_on' : 'left_con'; ?>" >新书通报</a>
                 <a href="<?= \yii\helpers\Url::to(['bookpayment/index']) ?>" class="<?= Yii::$app->controller->id == 'bookpayment'? 'left_con_on' : 'left_con'; ?>" >图书扣款</a>
                 <a href="<?= \yii\helpers\Url::to(['autoreply/index']) ?>" class="<?= Yii::$app->controller->id == 'autoreply'? 'left_con_on' : 'left_con'; ?>" >自动回复</a>
                 <a href="<?= \yii\helpers\Url::to(['account/index']) ?>" class="<?= Yii::$app->controller->id == 'account'? 'left_con_on' : 'left_con'; ?>" >账户管理</a>

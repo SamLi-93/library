@@ -46,7 +46,6 @@ class LectureorderController extends Controller
         $model = new Lecture();
         //$searchModel
         $query = Yii::$app->request->queryParams;
-        var_dump($query);
         $sql_parms = '';
         if (!empty($query['Lecture'])) {
             $query_parms = array_filter($query['Lecture']);

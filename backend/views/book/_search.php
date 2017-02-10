@@ -28,22 +28,21 @@ use yii\helpers\Url;
                 ],
             ]);
             ?>
-            <?php if (!empty($query['SourceSearch'])) {
-                $model->show_cover_pic = $query['SourceSearch']['show_cover_pic'];
-                $model->status = $query['SourceSearch']['status'];
-                $model->title = $query['SourceSearch']['title'];
+            <?php if (!empty($query['Books'])) {
+                $model->name = $query['Books']['name'];
+                $model->status = $query['Books']['status'];
             }?>
-            <?= $form->field($model, 'title')->textInput(['placeholder' =>'标题']) ?>
-            <?= $form->field($model, 'show_cover_pic')->widget(Select2::classname(), ['data' => ['0' => '否', '1' => '是'],'options' => ['placeholder' => '内容展示封面'],  ]); ?>
-            <?= $form->field($model, 'status')->widget(Select2::classname(), ['data' => ['0' => '否', '1' => '是'],'options' => ['placeholder' => '是否发送过'],  ]); ?>
+            <?= $form->field($model, 'name')->textInput(['placeholder' =>'书名']) ?>
+            <?= $form->field($model, 'status')->widget(Select2::classname(), ['data' => ['0' => '未通报', '1' => '通报成功'],'options' => ['placeholder' => '通报状态'],  ]); ?>
             <table style="width: 100%;">
                 <tr>
                     <td>
                         <div class="form-group">
                             <?= Html::submitButton("查询", ["class" => "btn btn-primary btn-sm"]) ?>
                             <?= Html::a("重置", ['index'], ["class" => "btn btn-primary btn-sm"]) ?>
-                            <?= Html::a('添加素材', ['create'], ['class' => 'btn btn-sm btn-success'])?>
-                            <?= Html::label('发送素材', '', ['class' => 'btn btn-sm btn-success','onclick'=>'send()'])?>
+                            <?= Html::label('通报新书', '', ['class' => 'btn btn-sm btn-success','onclick'=>'return send()'])?>
+                            <?= Html::a("获取新书", ['get'], ["class" => "btn btn-sm btn-success"]) ?>
+                            <?echo !empty($query['status'])?$query['status']:"";?>
                         </div>
                     </td>
                 </tr>

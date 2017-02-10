@@ -50,18 +50,18 @@ class SourceController extends Controller
         $searchModel = new SourceSearch();
         $this->layout = 'main';
         $query = Yii::$app->request->queryParams;
-        $sql = "select * from wechat_source where isdeleted = 0 ";
-        if(!empty($query['SourceSearch']['digest'])){
-            $sql .= " and digest = ".$query['SourceSearch']['digest'];
+        $sql_params = " isdeleted = 0 ";
+        if(isset($query['SourceSearch']['status'])){
+            $sql_params .= " and status = ".$query['SourceSearch']['status'];
         }
         if(!empty($query['SourceSearch']['show_cover_pic'])){
-            $sql .= " and show_cover_pic = ".$query['SourceSearch']['show_cover_pic'];
+            $sql_params .= " and show_cover_pic = ".$query['SourceSearch']['show_cover_pic'];
         }
         if(!empty($query['SourceSearch']['title'])){
-            $sql .= " and title like '%".$query['SourceSearch']['title']."%'";
+            $sql_params .= " and title like '%".$query['SourceSearch']['title']."%'";
         }
-        $sql .= " order by id desc";
-        $command = Yii::$app->db->createCommand('SELECT COUNT(*) FROM wechat_source  order by id desc');
+        $sql = "select * from wechat_source where ".$sql_params." order by id desc";
+        $command = Yii::$app->db->createCommand('SELECT COUNT(*) FROM wechat_source where'.$sql_params.' order by id desc');
         $count = $command->queryScalar();
 
         $dataProvider = new SqlDataProvider([

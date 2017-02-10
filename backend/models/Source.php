@@ -49,8 +49,10 @@ class Source extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
+            'id' => '',
             'title' => '标题',
+            'name' =>'通报标题',
+            'memo' =>'备注',
             'thumb_media_id' => '图片素材',
             'author' => '作者',
             'digest' => '单图文消息描述',

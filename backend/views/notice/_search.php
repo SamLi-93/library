@@ -28,22 +28,16 @@ use yii\helpers\Url;
                 ],
             ]);
             ?>
-            <?php if (!empty($query['SourceSearch'])) {
-                $model->show_cover_pic = $query['SourceSearch']['show_cover_pic'];
-                $model->status = $query['SourceSearch']['status'];
-                $model->title = $query['SourceSearch']['title'];
+            <?php if (!empty($query['Notice'])) {
+                $model->title = $query['Notice']['title'];
             }?>
-            <?= $form->field($model, 'title')->textInput(['placeholder' =>'标题']) ?>
-            <?= $form->field($model, 'show_cover_pic')->widget(Select2::classname(), ['data' => ['0' => '否', '1' => '是'],'options' => ['placeholder' => '内容展示封面'],  ]); ?>
-            <?= $form->field($model, 'status')->widget(Select2::classname(), ['data' => ['0' => '否', '1' => '是'],'options' => ['placeholder' => '是否发送过'],  ]); ?>
+            <?= $form->field($model, 'title')->textInput(['placeholder' =>'通报']) ?>
             <table style="width: 100%;">
                 <tr>
                     <td>
                         <div class="form-group">
                             <?= Html::submitButton("查询", ["class" => "btn btn-primary btn-sm"]) ?>
                             <?= Html::a("重置", ['index'], ["class" => "btn btn-primary btn-sm"]) ?>
-                            <?= Html::a('添加素材', ['create'], ['class' => 'btn btn-sm btn-success'])?>
-                            <?= Html::label('发送素材', '', ['class' => 'btn btn-sm btn-success','onclick'=>'send()'])?>
                         </div>
                     </td>
                 </tr>
