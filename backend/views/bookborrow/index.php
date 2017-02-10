@@ -17,14 +17,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <span>项目管理</span>
 </div>
 
-<?php echo $this->render('_search', [
-    'model' => $searchModel,
-    'pro_projectname' => $pro_projectname,
-    'pro_school' => $pro_school,
-    'pro_teacher' => $pro_teacher,
-    'pro_over' => $pro_over,
-    'query' => $query
-]); ?>
+<?php //echo $this->render('_search', [
+//    'model' => $searchModel,
+//    'query' => $query
+//]); ?>
 
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
